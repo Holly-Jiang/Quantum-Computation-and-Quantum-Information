@@ -1,0 +1,305 @@
+
+\documentclass[a4paper,11pt,onecolumn,twoside]{article}
+
+\usepackage{ctex} 
+\usepackage{CJK}         
+\usepackage{fancyhdr}
+\usepackage{amsmath,amsfonts,amssymb,graphicx}    
+\usepackage{subfigure}   
+\usepackage{indentfirst}
+\usepackage{bm}          
+\usepackage{multicol}    
+\usepackage{indentfirst} 
+\usepackage{picins}      
+\usepackage{abstract}    
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{stfloats}
+\usepackage{amsmath} 
+
+\addtolength{\topmargin}{-54pt}
+\setlength{\oddsidemargin}{-0.9cm}  
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\textwidth}{17.00cm}
+\setlength{\textheight}{24.00cm}    
+
+\newcounter{TempEqCnt}
+\renewcommand{\baselinestretch}{1.1} 
+\parindent 22pt 
+
+\begin{CJK}{GBK}{song}
+\title{\huge{探讨基于人群联结网络的\\
+智能垃圾处理系统}}
+\author{你妈\\[2pt]
+\normalsize
+（上海交通大学电子工程系~~~学号:cnmbcnmb） \\[2pt]}
+
+\end{CJK}
+
+
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \lhead{\thepage}
+  \chead{\centering{人~群~联~结~网~络\\
+  \scriptsize{\textbf{Crowd Associated Network}}}}
+  \rhead{December, 2017}
+  \lfoot{}
+  \cfoot{}
+  \rfoot{}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,RO]{Crowd Associated Network}
+\fancyhead[CE,CO]{人~群~联~结~网~络}
+\fancyhead[LE,LO]{\thepage}
+
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\newenvironment{figurehere}
+  {\def\@captype{figure}}
+  {}
+\makeatother
+
+\begin{document}
+\begin{CJK*}{GBK}{song}
+\CJKcaption{GB}
+
+\newcommand{\supercite}[1]{\textsuperscript{\cite{#1}}}
+
+\maketitle
+
+\setlength{\oddsidemargin}{ 1cm}  % 3.17cm - 1 inch
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\textwidth}{13.50cm}
+\vspace{-.8cm}
+\begin{center}
+\parbox{\textwidth}{
+\CJKfamily{hei}摘~~~要\quad \CJKfamily{kai}~本文提出了利用人群传输数据
+的非即时通信网络，并依据此网络提出了一种智能垃圾管理系统的构建设想。
+本文首先讨论了人群联结网络的特点，然后提出了智能垃圾管理系统的构架和通信协议
+，最后提出了利用遗传算法处理数据选择最优化垃圾处理的方案的构思。\\
+\CJKfamily{hei}关键词\quad\CJKfamily{kai}人群联结网络，智能垃圾处理系统，通信协议，遗传算法}
+\end{center}
+
+\vspace{.1cm}
+\begin{center}
+\parbox{\textwidth}{
+\begin{center}
+{\large{\textbf{Exploiting over a Smart Garbage Management System\\based on Crowd Associated Network}}}
+\vspace{0cm}
+\end{center}
+\begin{center}
+\textbf{Your Mother}\\[2pt]
+\small{\textit{Dept. Electronic Engineering, Shanghai Jiao Tong Univ., Student ID: cnmbcnmb}}\\[2pt]
+\end{center}
+{\small{\textbf{Abstract}\quad In this paper, we propose a non-real-time 
+messaging network that uses the crowd to transmit data and put 
+forward an idea of constructing a smart garbage management system based
+ on this network. This paper first discusses the characteristics
+  of crowd associated network, and then puts forward the architecture and
+   communication protocols of the smart garbage management system we proposed. 
+   Finally, it proposes the concept of using genetic algorithm to process 
+   data to select the optimal garbage disposal scheme.\\
+\textbf{Key Words}\quad crowd associated network, smart garbage management system, communication protocols, genetic algorithm}}
+}
+\end{center}
+
+\begin{minipage}[c]{10cm}
+\vspace{-35.5cm}
+
+\end{minipage}
+
+\setlength{\oddsidemargin}{-.5cm}  % 3.17cm - 1 inch
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\textwidth}{17.00cm}
+\CJKfamily{song}
+
+
+\begin{multicols}{2}
+
+\section{引言}
+
+我们常见的通信系统都可以分为即时（real-time）通信系统和非即时（non-real-time）通信系统\supercite{one}，在实时的通信系统中，
+对特定事件的响应都要在一定的时间范围内，因此实时性就是衡量系统性能的重要指标。为了使得
+即时通信网络的性能得到保证，现在的即时通信网络都使用了架构（infrastructure-based）或者半架构（semi-infrastructure-based）的网络结构，这使得
+安装和维护的成本相当高。另一方面，非即时通信网络的性能的衡量指标不尽相同，时间上的表现
+评价更是主观。所以，非即时通信网络的架构要求相比即时性网络来说低了很多，对于架构的要求
+也低了很多。本文就是旨在介绍一种低成本但是高效的少架构（infrastructure-less）网络，即人群联结网络（crowd associated network），和这种网络
+的一个重要应用——智能垃圾处理系统（smart garbage management system）\supercite{all}。\vspace{0.2cm}\\
+
+\indent 在这里，非即时、少架构的网络架构旨在支持智能垃圾处理系统的整个运营，并且收取部署和维护
+的最低成本。所提出的体系结构与任何非即时应用程序兼容，其中频繁的数据采集对于该应用程序的正常运行是不必
+要的。在所提出的网络中，需要利用一组人群与其他网络组件从相当大的区域（例如，城镇或城市）获
+取数据，运用人群进行网络数据传输和收集，人群是前后环节的联结也是整个网络的重要一环，因此被称作
+人群联结网络。\vspace{0.2cm}\\
+\indent 接下来的部分将分别讨论人群联结网络体系结构的细节、智能垃圾处理系统的结构、智能垃圾处理系统所需的
+通信协议以及垃圾处理降低成本的最佳解决方案。在这里将采用遗传算法从获得的数据寻找可行解。在遗传算法中，
+采用了了两个新的适应度函数，并将其与一个简单的适应度函数进行了比较。结果表明了采用新的适应度函数来寻找可
+行解的必要性与合理性。\supercite{one}
+
+\section{人群联结网络的特点}
+这里提出的少架构网络结构的关键概念是利用人群来完成网络中环节之间的沟通，人群成为了网络中不可缺少的一部分，
+因此被称为人群联结网络。在该网络中，组件被分为两个部分：专用代理（dedicated agents）和非专用代理（non-dedicated agents）。\vspace{0.2cm}\\
+\indent 专用代理是指单独特定固定在网络中的用来执行特定任务的环节组件。一般来说专用代理都是静态的（如无线通信中的基站），同非专用代理进行信息
+交换，从而实现网络的功能。另一方面，非专用代理一般就是特指人群，装备了移动设备的人群在这个网络中扮演了中间中继的角色，
+填补了专用代理之间的间隙，从而使得网络成为一个整体而能够正常地运行。人群利用移动设备可以将一个或者多个专用代理中的数据信
+息提取，并复制传递到其他的专用代理中。不仅如此，人群成员内部也可以进行信息的交互传递。人群这样就可以作为一种信息传递的介
+质，将我们所需要的数据信息传递到网络中的各个地方。因此，人群联结网络可以很好地提升网络中数据传输和端到端的性能表现。\vspace{0.2cm}\\
+\indent 现在移动设备的普及率和技术水平都已经到达了一个很高的水平，几乎所有人群都可以参与到网络中来。但是不可能所有的人
+都有积极性想成为志愿者。这项工程必须需要一定数量的志愿者才行，但是不能采取强制的方法，也没有任何经济补偿。志愿者将会使用移动设备或者在汽车摩托车
+等座驾中安放网络元件，这些移动设备和网络元件统称为志愿者代理。这样的话，网络就是一个典型的非即时网络，数据的传输和处理可能需要几个小时甚至一天来完成。\vspace{0.2cm}\\
+\indent 人群联结网络这样的非即时网络有以下几个优点。第一，所需要的静态架构很少，对于硬件的搭建要求不高，易于实现。第二，不熟的要求不高，建设成本很低，特别是基站、汇聚节点等设施。
+第三，专用代理数量少，维护的成本低。最关键的问题是志愿者代理的数量要足够充足，因此可以采取某些奖励处罚措施促进人们报名参加。比如当地社区可以修改和减少积极参与的志愿者
+税收与其他服务费用的收取。又比如尽量选取网络覆盖范围之内的市政公司、政府办公室和社会组织的雇员与成员。再或者可以利用区域内的公交车、公共垃圾桶和路灯等公共设施
+来充当志愿者代理，那么这样的话需要使用的真正的志愿者人数就会有所减少。
+\begin{figure*}
+  \centering
+  \includegraphics[width=12cm]{chart.jpg}
+  \caption{智能垃圾处理系统的结构}\label{fig1}
+  \end{figure*}
+\section{智能垃圾处理系统的结构}
+\indent 本节主要介绍智能垃圾处理系统的硬件构造结构。智能垃圾处理系统主要由以下几部分组成：智能垃圾桶（smart garbage bin）、志愿者代理（volunteer agent）、
+基站汇聚节点（sink）、控制中心（control center）和垃圾收集代理（garbage collecting agent）。每个元件
+都有专门的编号，便于管理。这些组件有些用于收集和传输数据，而有些则处理数据寻找最佳或接近最佳的解决方案，减少处理成本。接下来简要介绍各个组件。\vspace{0.2cm}\\
+\indent 智能垃圾桶不像传统垃圾桶，它拥有一个传感器，可以检测垃圾桶中垃圾的体积。垃圾桶定期获取这些数据同其他信息比如剩余电量一起发送给遇到的其他组件。正如上文所说，
+智能垃圾桶采用电池供电，并且具有一定的计算和存储功能。因此可以采用两种方法延长电池的使用周期，其一是智能垃圾桶只有必需的信息传输功能而没用中继功能。并且它不会
+对范围内侦测到的所有接收端都不停发送数据，而是选择一个优先级最高的点发送，以减少能量的耗散。\vspace{0.2cm}\\
+\indent 人群代理这个模块的主要功能是从智能垃圾桶处接收数据，并在遇到兼容的接收端时可以交换数据。这是整个网络中唯一的非专用组件，因此它的行为难以预料，功能和时间地点的
+因素有着密切的关系。因此在一个地区的网络中必须安排足够多的人群代理以保证数据的接收和传输，至少有一个将数据可以传输到基站接收。为了获得足够的性能，电量必须得到保证，
+一般如果是人们用的移动设备，电量都能得到保证。如果是车载的设备，则可以利用车上的电源为其供电。\vspace{0.2cm}\\
+\indent 基站这个部分的目标是同进入通信范围内的人群代理进行数据交换。基站是固定的专用代理，因此不需要使用电池，直接用输电线进行能源供给即可。终端基站（destination sink）
+是一种特殊的基站，它直接同控制中心相连。不像其他基站会将数据的拷贝传输给进入通信范围的任何接收端，终端基站只把收到的数据转发给控制中心。\vspace{0.2cm}\\
+\indent 处理中心的功能是接收终端基站的数据，并利用数据计算出垃圾收集的最佳解决方案。一般衡量计算方案都会采用一个或者多个变量，比如垃圾桶的数量或者距离。所有的
+计算结果都存储在缓存区内，按照需求进行传输。\vspace{0.2cm}\\
+\indent 垃圾收集代理这个环节是遵照控制中心计算出的方案把智能垃圾桶的垃圾卸载处理，在必要的时候也可以为垃圾桶更换电池。一旦卸载完所有安排的智能垃圾桶，它会到垃圾场处理垃圾，
+之后再返回车场。\vspace{0.2cm}\\
+\indent 如图所示，人群联结网络是一个双层的网络架构，其中第一层主要用来进行数据的采集，第二层用来进行数据处理并计算出垃圾收集处理的最佳解决方案。通常垃圾桶都会放在路边
+以简化垃圾收集的操作。换言之，垃圾桶在网络工作的区域内是有一定的空间分布的组件，它们周期性地检测垃圾的体积产生用来传输的数据包和其他信息。人群代理是系统中的移动代理，
+当其与智能垃圾桶相遇时，会提供志愿的从垃圾桶中收集数据的服务。在这之后，人群代理会随机地遇见其他人群代理或者基站，相遇时便会产生通信，以求这些中继节点可以把数据包传输到
+终端基站，基站接收器也应用类似的机会转发技术来将数据包路由到目的地。因此，这些组件具有路由功能，以决定要传输哪些分组，传播多少副本等等。
+最后，终端基站接收来自各种源的数据包，并将它们传送给控制中心以供进一步处理。如之前所述，网络体系结构的第二层涉及数据处理，为垃圾收集代理发现最佳解决方案并从收集获取反馈。
+控制中心在收到终端基站地数据后，处理所需要的数据，并在进行简单的新处理后将其存入缓冲区，即旧数据被新数据覆盖。然后，周期性地计算如前所述的关于一个或多个参数的最优解。
+最后将解决方案传给垃圾处理代理让其以最高的效率进行垃圾收集。每当清理一个垃圾桶之后，系统都会依据需要进行刷新，并在必要的时候为垃圾桶更换电池。垃圾收集代理也可能在运行过程中
+在路上遇到不是需要卸载的垃圾桶,当其返回的时候也会把这些数据包带回传给控制中心，更新其中的数据。
+\section{智能垃圾处理系统的通信协议}
+\indent 如上文所述，人群联结网络中只有智能垃圾桶才能生成数据包，其他的组件只能作为中继向终端基站发送数据。在每一个数据包中，智能垃圾桶都封装了垃圾体积状态和电量使用状态
+两个信息，前者表示何时去卸载清理垃圾桶，后者则表示什么时候取更换电源。因为网络的非即时性，网络区域很大会导致数据传输有很大的延迟和间断，
+单份的数据包可能无法传输到终端基站。所以在给定的时间范围内将数据包拷贝多份同时传输可以提高在一定时间间隔里传输到终端基站的可靠性。因此智能垃圾桶会向网络输入多份数据包副本，
+通过各种各样的媒介进行传输（主要是人群）。在数据传输方面，网络中的组件具有异构能力，智能垃圾桶和终端基站不需要路由功能。一个简单的介质访问控制（medium access control, MAC）
+协议就可以启用网络中的这两个组件来传输和接收数据包。与此同时，其他的组件都是中间节点，它们需要中继数据包，因此它们需要路由功能。因此本节中主要讨论选取合适的路由协议与MAC协议。
+\vspace{0.2cm}\\
+\indent 关于路由协议。因为本网络是一个少架构的网络，所以网络的区域往往很大。几乎不太可能每一个垃圾桶都有直接连接的端到端线路将数据包传送到控制中心。所以网络中的所有组件都会遇到
+间歇连接、连接缺乏或者时变的逐跳（hop-to-hop）延迟\supercite{two}。因此，在数据传输之前假定直接端到端路由的路由协议在本网络中不适用。相反地，存在一种机会路由协议，它会把数据包存储起来，直到出现机会将其转发到
+另一个节点（希望接收节点是目的地），或者将至少将数据包直接转发到目的地或经由其他中间节点传输到目的地。 这些协议被称为基于存储和转发（store-and-forward-based）的路由协议\supercite{three}。\vspace{0.2cm}\\
+\indent 大多数的基于存储和转发的路由协议都可以分为基于复制的路由协议和基于转发的路由协议。顾名思义，基于复制的协议类，他们在必要时会复制数据包。
+这类协议中一种普遍的做法是允许通过大量的复制数据包来增加数据包的传送概率。相反地，基于转发的路由协议则在数据包其到达终点之前都不会进行任何复制。
+尽管这种方法在资源保存和开销减少方面实现了更高的效率，但是其较低的包传送率和较高的端到端延迟严重影响了网络的性能。因此这两种路由协议都不能被采用。\vspace{0.2cm}\\
+\indent 现在提出来很多种基于复制的路由协议，比如流行路由协议建立一个新的通信时进行复制的话，可以提高数据包的传输率，但是这样的话网络的负担会很高，也不适合于本网络。
+但是选用合适的限制复制时候的负载的机制的话，不论是架构还是能源消耗都会轻松许多，就可以在本网络中使用了。\vspace{0.2cm}\\
+\indent 关于MAC协议。与路由协议不同，MAC协议对于人群联结网络中的所有网络组件都是强制性的。在现有的MAC协议中，基于握手的MAC协议（如IEEE 802.11和IEEE 802.15.4）适用于频繁竞争现象以及由于冲突导致丢包率高的网络。
+在基于握手的MAC协议中，节点必须在在握手过程启动任何传输尝试之前预留信道。因此，像人群联结网络这样的竞争和冲突很少现象的网络体系结构，这些协议反而往往会在数据传输之前需要大量
+的开销，所以并不适用\supercite{four}。另一方面，大多数基于竞争的协议，例如ALOHA和载波侦听多路访问（CSMA），都假设下一个节点位于其附近传输数据包。
+因此，这种类型的协议也不适用。对于这种网络体系结构，只有在节点进入通信范围内时触发数据包的MAC协议才是首选。一个节点必须存储这些数据包并将其机会性地传输。
+这种机制在基于存储和传送（store-and-delivery-based）的MAC（SD-MAC）协议中有突出表现。这是一个轻量级的MAC协议，适用于大多数传感器节点\supercite{five}。
+\section{数据处理}
+\indent 在通过网络架构获取必要的数据包之后，控制中心提取所有需要的数据，然后在稍后处理这些数据以找到最佳解决方案。如果所采集的数据未被处理，
+则智能垃圾处理系统是不完整的，并且不计算最佳结果（在最小化系统的管理成本方面）。所以为了简单起见，在我们即将进行的讨论中，假设控制中心具有足够的最近的网络数据。
+它必须计算可行的解决方案，并按需求将其交付给垃圾收集代理。在成本优化方面，以假设旨在最小化的垃圾收集代理的需求来寻找方案。请注意，如果一个垃圾收集代理可以卸载所有垃圾箱，
+那么这个问题就可以转化为一个简单且经过深入研究的旅行商问题（traveling salesman problem, TSP）。但是实际上这种假设不太现实，因为所有的垃圾收集代理在容量方面都有限制。
+因此有必要考虑这个约束，我们将更加真实的称它为垃圾回收问题（garbage collection problem, GCP）。GCP问题类似于已知的容量车辆路径问题（CVRP）。在CVRP问题中，必须利用具
+有相同能力的运输车辆的固定车队以最小成本为单个商品和单个仓库提供已知的客户所需求的服务。CVRP解决问题的目标包括尽量减少车队数量，并尽量减少旅行时间，
+同时保持每条路线的商品总需求在服务车辆的能力范围内。 但是在GCP问题中，所寻求的解决的目标不是最小化旅行时间，而是设最大化垃圾收集，并减少垃圾收集代理的需求消耗，
+比如车辆的使用时间。在这里将最大化垃圾收集的抽象问题具体为三种假设指标，并寻找指标最低的解决方案\vspace{0.2cm}\\
+假设一：最大限度地减少旅行时间将减少垃圾收集代理的数量的要求。\vspace{0.1cm}\\
+假设二：最大限度地收集垃圾量将使垃圾收集代理数量的要求最小化。\vspace{0.1cm}\\
+假设三：最小化收集每单位量的垃圾所需要的覆盖距离将最小化垃圾收集代理数量的要求。\vspace{0.2cm}\\
+\indent 在上述假设中，我们认为假设一是一个基准的目标，因为它被广泛用于评估现有的具有类似目标的算法，而假设二和三是新提出的目标。对大量的垃圾桶数量来说（一般不少于100），
+最佳接近解决方案的得出是非常困难的，无法在多项式时间复杂度内完成。但是近年来的工作表明了遗传算法如果选定了合适的参数，将能够有效地降低运算的时间复杂度和问题的难度。
+因此在这里选取遗传算法进行数据处理获得最佳解决方案。\vspace{0.2cm}\\
+\indent 遗传算法是利用一组人口（祖代），并创造了几代后代来解决一个特定的优化问题的算法。一个种群由一组方案（又称染色体）组成，每个方案都含有基因形式。
+对父本进行交叉操作以出现新的染色体组合，而突变操作使方案或染色体随机变化。调用一个选择过程来选择最适合的解决方案作为父母，然后再次交叉操作，以创建其他适合的解决方案作为后代。
+在每次迭代结束时，新一代是由旧一代和之前的后代的组合产生的。一般来说，新一代的规模都比前一代要大。 为了算法的时间空间效率必须保持每一代保持大小的固定，所以计算所有解的适应度值。
+最后应用一个过滤程序，使得只有最适合的节点才能生存下来，放入父本总集合中。因此这里根据三种假设选取了三种适应函数：\\
+\begin{align*}
+  &F(i) = \frac{1}{{1 + \left( {{\delta _{0,j}} + \sum\nolimits_{j = 1}^m {{\delta _{j,j + 1}} + {\delta _{m,0}}} } \right)}}\tag{$1$}\\
+  &F(i) = \sum\nolimits_{j = 1}^m {\vartheta (j)}\tag{$2$}\\
+  &F(i) = \frac{1}{{1 + \frac{{{\delta _{0,j}} + \sum\nolimits_{j = 1}^m {{\delta _{j,j + 1}} + {\delta _{m,0}}} }}{{\sum\nolimits_{j = 1}^m {\vartheta (j)} }}}}\tag{$3$}\\ 
+\end{align*}
+\indent 在这里$F(k)$表示的是第$k$代适应函数，${\delta _{i,j}}$表示的是$i$和$j$两个智能垃圾桶之间的欧拉几何距离，$\vartheta (m)$表示的是特定的垃圾桶$m$的垃圾体积。
+由于每个垃圾桶的体积被认为是随机的而不是固定容量的容器，所以染色体或者方案的大小可能变化，这使得遗传算法的实施更具挑战性。为了仿真验证三种适应函数，在这里选取了三个边长
+分别为500米、2000米、5000米的正方形区域（二维欧拉平面）。垃圾桶在其中呈均匀分布，数量$N$在10到100之间浮动。每个垃圾桶都有一个身份编号，0号编号则是垃圾场。
+每个垃圾桶的垃圾体积都是随机的，且小于垃圾桶的最大容积$\beta_{c}$，没有空的垃圾桶，每个垃圾桶都会有一个最少的垃圾装载率$\mu$,既可以表示为$\vartheta (m)> \mu* \beta_{c}$。个个垃圾桶的距离使用欧拉距离而不是实际的道路。
+为了简化运算，运行的最短距离也就是最短的时间，即垃圾收集代理运动速度恒定。假设数据足够充分去进行计算获得解决方案。在本次仿真中，为了加快计算解决方案，采用了一选择的突变和交叉。
+垃圾车最大容量设为1000千克，垃圾桶最大容量$\beta_{c}$为200千克。每个垃圾桶最少的装载率$\mu=0.5$，每代子代的大小为$2N$，代数为50代。\vspace{0.2cm}\\
+\begin{figurehere}
+  \includegraphics[width=0.6cm]{blank.jpg}
+  \includegraphics[width=6cm]{chart2.jpg}
+  \caption{500米区域仿真结果}\label{fig2}
+  \includegraphics[width=6cm]{chart3.jpg}
+  \caption{2000米区域仿真结果}\label{fig3}
+  \includegraphics[width=6cm]{chart4.jpg}
+  \caption{5000米区域仿真结果}\label{fig4}
+  \end{figurehere}
+\indent 为了从遗传算法中找到合适的解决方案，必须利用最佳的参数值，这些参数值是可能不稳定的，并且会随着情况变化。
+一般来说，突变率和交叉率在任何进化算法（如遗传算法）中发现适当的解决方案都起着重要的作用。
+因此，必须进行仿真以发现三个优选情形的最佳突变率和交叉率。下面的是当垃圾桶数量为30的时候的仿真结果。颜色越冷色调表示使用率越低，反之则使用率越高。
+就可以从其中得到最佳的突变率和交叉率，在图上标出。不难看出，在500米边长的二维平面里突变率最佳是0.4，交叉率最佳是0.1。在2000米边长的二维平面里突变率最佳是0.35，交叉率最佳是0.2。
+在5000米边长的二维平面里突变率最佳是0.3，交叉率最佳是0.15。\\
+\section{结果分析}
+\begin{figurehere}
+  %\includegraphics[width=0.6cm]{blank.jpg}
+  \includegraphics[width=6cm]{table1.jpg}
+  \caption{垃圾车装载利用率}\label{fig5}
+  \includegraphics[width=6cm]{table2.jpg}
+  \caption{垃圾车需求的数量}\label{fig6}
+  \includegraphics[width=6cm]{table3.jpg}
+  \caption{单位体积垃圾行进距离}\label{fig7}
+  \end{figurehere}
+\indent 为了评估三个假设的表现，发现它们在找到最佳或接近最优的解决方案方面的有效性，我们考虑三个指标：容器的所需数量，垃圾处理代理的利用率和单位垃圾量的行程距离，
+或简而言之，每单位体积的距离。在对图5进行绘图之前，所有的结果都使用最大-最小归一化方法归一化。因此，对于每个度量标准，由每个给定的假设产生的性能指标不会随着该区域的大小改变
+而显着变化。可以观察图5得到，由于假设二试图使固定容量的容器的垃圾收集最大化，所以其利用率在任何优选区域远高于其他两个假设。它实现了垃圾车辆容量的最高利用率（在$N=100$的时候利用率为1）。
+由于假设三尝试最小化单位体积收集的距离的策略，因此实现了比假设一更高的利用率，达到了0.74，位居第二。这些利用结果反映了垃圾收集代理的要求，并在图6中进一步说明。
+在图6中，由于假设二以最有效的方式利用垃圾处理代理，因此它比其他两个假设需要更少的垃圾车数量。在假设一和假设三之间，假设三各方面表现都胜过了假设一。
+对于假设二和三，所需的垃圾车数量随着$N$线性增加。另一方面，对于假设一来说，所需垃圾车的数量与$N$最初具有线性趋势，但是当$N$足够大时则增长率变快，变为类似于指数增长的趋势。\vspace{0.2cm}\\
+\indent 虽然从前面的讨论可以看出，假设二性能和假设三相比甚至更好，但是图7显示了其他方面得重要指标。由于假设二尝试使容量最大化，
+所以垃圾处理代理必须行进很长的距离，这是三个假设中最长的，达到了0.82乃至更多。相比之下，虽然假设三要求垃圾车数量略高一些，但其平均行程远低于假设二。
+将假设一和假设三在这一指标上进行比较不难发现，最初假设一和假设三产生几乎相等的运行距离，但是当我们增加节点数量$N$时，假设三将具有比假设一更低的每单位体积垃圾的平均运行距离。
+这是因为假设一得要求导致的，假设一要求距离最短，那么对于每一个垃圾车来说都要运行距离最短，但同时要完成目标，所以随着垃圾车班次数增加运行距离越来越远，甚至会超过假设三里垃圾车最长运行距离。
+所以导致整体的平均距离比假设三大。所以在行驶路程上假设三表现最好，如果考虑油耗等实际问题，则应该选择假设三。\\
+\\
+
+\small
+\begin{thebibliography}{99}
+\setlength{\parskip}{0pt}  %段落之间的竖直距离
+\bibitem{all} S Azad, A Rahman, AT Asyhari,IEEE Communications, July, 2017 - ieeexplore.ieee.org
+\bibitem{one} M. Abdulla Al Mamun et al., “Integrated Sensing Systems
+and Algorithms for Solid Waste Bin State Management
+Automation,” IEEE Sensors J., vol. 15, no. 1, Jan. 2015, pp. 561–67.
+\bibitem{two} N. V. Karadimas, K. Papatzelou, and V. G. Loumos, “Genetic
+Algorithms for Municipal Solid Waste Collection and
+Routing Optimization,” Artificial Intelligence and Innovations
+2007: From Theory to Applications, vol. 247, 2007,
+pp. 223–31.
+\bibitem{three} A. Vahdat and D. Becker, “Epidemic Routing for Partially
+Connected Ad Hoc Networks,” Dept. of Comp. Sci., Duke
+Univ., tech. rep. CS-2000-06, Apr. 2000.
+\bibitem{four}T. Spyropoulos, K. Psounis, and C. S. Raghavendra, “Spray
+and Wait: An Efficient Routing Scheme for Intermittently
+Connected Mobile Networks,” Proc. ACM WDTN, Philadelphia,
+PA, Aug. 2005, pp. 252–59.
+\bibitem{five} IEEE-SA, “IEEE 802.15: Wireless Personal Area Networks
+(PANs),” 2014.
+
+\end{thebibliography}
+
+\normalsize
+
+\end{multicols}
+
+\clearpage
+\end{CJK*}
+\end{document}

@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.30)  30 OCT 2019 19:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.30)  9 NOV 2019 15:49
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **Q&A(1-10).tex
 (./Q&A(1-10).tex
@@ -277,49 +278,53 @@ File: c70gbsn.fdx 2015/04/18 4.8.4
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./Q&A(1-10).aux) ) 
 Here is how much of TeX's memory you used:
- 2092 strings out of 492616
- 23894 string characters out of 6129480
- 90072 words of memory out of 5000000
- 5971 multiletter control sequences out of 15000+600000
- 22347 words of font info for 65 fonts, out of 8000000 for 9000
+ 2082 strings out of 492616
+ 23715 string characters out of 6129480
+ 92072 words of memory out of 5000000
+ 5957 multiletter control sequences out of 15000+600000
+ 23491 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,8n,21p,205b,349s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,8n,21p,211b,349s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.
 enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.p
 fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pf
 b></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
 sr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu4e.pfb></usr/loca
-l/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu4f.pfb></usr/local/texl
-ive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu51.pfb></usr/local/texlive/20
-19/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu52.pfb></usr/local/texlive/2019/tex
-mf-dist/fonts/type1/arphic/gbsnu/gbsnu53.pfb></usr/local/texlive/2019/texmf-dis
-t/fonts/type1/arphic/gbsnu/gbsnu54.pfb></usr/local/texlive/2019/texmf-dist/font
-s/type1/arphic/gbsnu/gbsnu57.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
-1/arphic/gbsnu/gbsnu59.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arph
-ic/gbsnu/gbsnu5b.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbs
-nu/gbsnu5c.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbs
-nu5e.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu5f.p
-fb></usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu60.pfb></u
-sr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu62.pfb></usr/loc
-al/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu65.pfb></usr/local/tex
-live/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu66.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu67.pfb></usr/local/texlive/2019/te
-xmf-dist/fonts/type1/arphic/gbsnu/gbsnu76.pfb></usr/local/texlive/2019/texmf-di
-st/fonts/type1/arphic/gbsnu/gbsnu77.pfb></usr/local/texlive/2019/texmf-dist/fon
-ts/type1/arphic/gbsnu/gbsnu79.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
-e1/arphic/gbsnu/gbsnu7e.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arp
-hic/gbsnu/gbsnu88.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gb
-snu/gbsnu8b.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gb
-snu91.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu96.
-pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnuff.pfb></
-usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/
-texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on Q&A(1-10).pdf (1 page, 125405 bytes).
+r/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu30.pfb></usr/loca
+l/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu4e.pfb></usr/local/texl
+ive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu4f.pfb></usr/local/texlive/20
+19/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu50.pfb></usr/local/texlive/2019/tex
+mf-dist/fonts/type1/arphic/gbsnu/gbsnu51.pfb></usr/local/texlive/2019/texmf-dis
+t/fonts/type1/arphic/gbsnu/gbsnu52.pfb></usr/local/texlive/2019/texmf-dist/font
+s/type1/arphic/gbsnu/gbsnu53.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
+1/arphic/gbsnu/gbsnu54.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arph
+ic/gbsnu/gbsnu57.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbs
+nu/gbsnu59.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbs
+nu5b.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu5c.p
+fb></usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu5e.pfb></u
+sr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu5f.pfb></usr/loc
+al/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu60.pfb></usr/local/tex
+live/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu62.pfb></usr/local/texlive/2
+019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu65.pfb></usr/local/texlive/2019/te
+xmf-dist/fonts/type1/arphic/gbsnu/gbsnu66.pfb></usr/local/texlive/2019/texmf-di
+st/fonts/type1/arphic/gbsnu/gbsnu67.pfb></usr/local/texlive/2019/texmf-dist/fon
+ts/type1/arphic/gbsnu/gbsnu72.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
+e1/arphic/gbsnu/gbsnu76.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arp
+hic/gbsnu/gbsnu77.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gb
+snu/gbsnu79.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gb
+snu7e.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu88.
+pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu89.pfb></
+usr/local/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu8b.pfb></usr/lo
+cal/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu91.pfb></usr/local/te
+xlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu96.pfb></usr/local/texlive/
+2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnuff.pfb></usr/local/texlive/2019/t
+exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/
+fonts/type1/urw/times/utmr8a.pfb>
+Output written on Q&A(1-10).pdf (1 page, 140958 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
+ 158 PDF objects out of 1000 (max. 8388607)
+ 116 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

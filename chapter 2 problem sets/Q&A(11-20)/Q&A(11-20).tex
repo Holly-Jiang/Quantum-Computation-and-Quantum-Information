@@ -12,62 +12,62 @@
 \begin{document}
 	\title{\textbf{Q\&A（2.11-2.20）}\\[1ex]\begin{large}
 		\end{large}}
-	\author{骆挺宇\quad 蒋慧}
+	\author{Luotingyu\quad Jianghui}
+	\date{11th September 2019 }
 	\maketitle
 \begin{quote}
 \textbf{Exercise 2.11: (Eigenedecomposition of the Pauli matrices)} Find the eigenvectors, eigenvalues, and diagonal representations of the Pauli matrices $X, Y, Z$. \\ \\
 \textbf{Answer:}\\ \\
-	 \hspace*{0.6cm}$X=\begin{bmatrix}0& 1\\1& 0\end{bmatrix}$,	
-	$Y=\begin{bmatrix}0& -i\\i&0\end{bmatrix}$,
+	$X=\begin{bmatrix}0& 1\\1& 0\end{bmatrix}$,	
+	$Y=\begin{bmatrix}0& -\it{i}\\i&0\end{bmatrix}$,
 	$Z=\begin{bmatrix}1& 0\\0&-1\end{bmatrix}$.\\ \\
-	Due to $c(\lambda$)$\equiv$ det $ |A-\lambda I |$, When $ c(\lambda)=0$ ,we can get  det$|A-\lambda I|=0.$ \\ \\ 
-	Firstly, we discuss $X$, thus det$|X-\lambda I|=0$, then \\ \\ 
+	 For any matrices A, through  det$|A-\lambda I|=0$，we can caculate the eigenvalues. \\
+	Firstly, we discuss $X$. We set det$|X-\lambda I|=0$, then \\ \\ 
 	$\left|\begin{bmatrix}0& 1\\1& 0\end{bmatrix} - \begin{bmatrix}\lambda& 0\\0& \lambda\end{bmatrix}\right|=0$,
 	%$\left |-\lambda& 1\\1&-\lambda \right |=0.$\\  \\
 	$\left|\begin{array}{cccc} -\lambda& 1\\1&-\lambda \end{array}\right| =0. $ \\  \\
-	The solutions of $\lambda$  are $1$ and $-1$.\\
-	When $\lambda_{1}=1$,
+	The solution of $\lambda$  is $1$ or $-1$.\\
+	When $\lambda_{1}=1$, calculate 
     	$(X-\lambda_{1} I )|\lambda_{1}\rangle=0$, \\  \\
 	$\begin{bmatrix}-1&1\\1&-1\end{bmatrix}\begin{bmatrix}x_{1}\\x_{2}\end{bmatrix}=$
 	$\begin{bmatrix}0\\0\end{bmatrix}$. \\  \\ 
 	Thus we get the solution $x_{1}=x_{2}$ .\\ 
-	We  assume that $x_{1}=1$, thus $x_{2}=1$.  \\ 
+	We  assume that $x_{1}=1$, then $x_{2}=1$.  \\ 
 	After normalization, the following eigenvector is obtained:\\  \\
 	$|\lambda_{1}\rangle=\frac{1}{\sqrt{2}}\begin{bmatrix}1\\1\end{bmatrix}
 	=\frac{1}{\sqrt{2}}\begin{bmatrix}1\\0\end{bmatrix}+\frac{1}{\sqrt{2}}\begin{bmatrix}0\\1\end{bmatrix}
 	=|+\rangle$. \\  \\
 	%-1
-	When $\lambda_{2}=-1$,
+	When $\lambda_{2}=-1$, calculate
 	$(X-\lambda_{2} I)|\lambda_{2}\rangle=0$, \\  \\
 	$\begin{bmatrix}-1&1\\1&-1\end{bmatrix}\begin{bmatrix}x_{1}\\x_{2}\end{bmatrix}=$
 	$\begin{bmatrix}0\\0\end{bmatrix}$. \\  \\ 
 	Thus we get the solution $x_{1}=-x_{2}$.\\ 
-	We  assume that $x_{1}=1$, thus $x_{2}=-1$.  \\
+	We  assume that $x_{1}=1$, then $x_{2}=-1$.  \\
 	After normalization, the following eigenvector is obtained:\\  \\
 	$|\lambda_{2}\rangle=\frac{1}{\sqrt{2}}\begin{bmatrix}1\\-1\end{bmatrix}
 	=\frac{1}{\sqrt{2}}\begin{bmatrix}1\\0\end{bmatrix}-\frac{1}{\sqrt{2}}\begin{bmatrix}0\\1\end{bmatrix}
 	=|-\rangle$.
 	\\ \\
-	So the diagonal representations of $X$ is
-	$X=|+\rangle\langle+|-|-\rangle\langle-|.$ \\ 
-	Secondly, we discuss $Y$, thus det$|Y-\lambda I|=0$, then\\  \\
+	Thus the diagonal representation of $X$ is$|+\rangle\langle+|-|-\rangle\langle-|.$ \\ 
+	Secondly, we discuss $Y$. We set  det$|Y-\lambda I|=0$, then\\  \\
 	$\left| \begin{bmatrix}1&-i\\i& 0\end{bmatrix}-\begin{bmatrix}\lambda&0\\0&\lambda\end{bmatrix} \right |=0$,
 	%$\begin{bmatrix}-\lambda&-i\\i&-\lambda\end{bmatrix}$=0.\\  \\
 	$\left|\begin{array}{cccc} -\lambda&-i\\i&-\lambda \end{array}\right| =0. $ \\
 
-	The solutions of $\lambda$  are $1$ and $-1$.
+	The solution of $\lambda$  is $1$ or $-1$.
 	
-	When $\lambda_{1}=1$,
+	When $\lambda_{1}=1$, calculate
     	$(Y-\lambda_{1} I)|\lambda_{1}\rangle=0$, \\  \\
 	$\begin{bmatrix}-1&-i\\i&-1\end{bmatrix}\begin{bmatrix}x_{1}\\x_{2}\end{bmatrix}$=
 	$\begin{bmatrix}0\\0\end{bmatrix}$. \\  \\ 
 	So we get the solution $x_{1}=-ix_{2}$ .\\
-	We  assume that $x_{1}=1$, thus $x_{2}=i$.  \\ 
+	We  assume that $x_{1}=1$, then $x_{2}=i$.  \\ 
 	%归一化Y
 	After normalization, the following eigenvector is obtained:\\  \\
 	$|\lambda_{1}\rangle=\frac{1}{\sqrt{2}}\begin{bmatrix}1\\i\end{bmatrix}.$ 
 	\\  \\
-	When $\lambda_{2}=-1$,
+	When $\lambda_{2}=-1$, calculate
     	$(Y-\lambda_{2} I)|\lambda_{2}\rangle=0,$ \\  \\
 	$\begin{bmatrix}1&-i\\i&1\end{bmatrix}\begin{bmatrix}x_{1}\\x_{2}\end{bmatrix}=$
 	$\begin{bmatrix}0\\0\end{bmatrix}$. \\  \\
@@ -77,132 +77,120 @@
 	After normalization, the following eigenvector is obtained:\\  \\
 	$|\lambda_{2}\rangle=\frac{1}{\sqrt{2}}\begin{bmatrix}1\\-i\end{bmatrix}.$ \\  \\
 	%对角化
-	So $Y=\left[\begin{array}{c}{\frac{\sqrt{2}}{2}} \\ {\frac{\sqrt{2}}{2} i}\end{array}\right]\left[\begin{array}{cc}{\frac{\sqrt{2}}{2}} & {\frac{\sqrt{2}}{2} i}\end{array}\right]-\left[\begin{array}{c}{\frac{\sqrt{2}}{2}} \\ {-\frac{\sqrt{2}}{2} i}\end{array}\right]\left[\begin{array}{cc}{\frac{\sqrt{2}}{2}} & {-\frac{\sqrt{2}}{2} i}\end{array}\right]\\ \\=\frac{1}{2}\left[\left[\begin{array}{c}{1} \\ {i}\end{array}\right]\left[\begin{array}{cc}{1} & {i}\end{array}\right]-\left[\begin{array}{c}{1} \\ {-i}\end{array}\right]\left[\begin{array}{cc}{1} & {-i}\end{array}\right]\right].$ \\  \\
-	Thirdly, we discuss Z, thus
-	det$|Z-\lambda I |=0$, then\\  \\
+	So we can get $Y=\left[\begin{array}{c}{\frac{\sqrt{2}}{2}} \\ {\frac{\sqrt{2}}{2} i}\end{array}\right]\left[\begin{array}{cc}{\frac{\sqrt{2}}{2}} & {\frac{\sqrt{2}}{2} i}\end{array}\right]-\left[\begin{array}{c}{\frac{\sqrt{2}}{2}} \\ {-\frac{\sqrt{2}}{2} i}\end{array}\right]\left[\begin{array}{cc}{\frac{\sqrt{2}}{2}} & {-\frac{\sqrt{2}}{2} i}\end{array}\right]\\ \\=\frac{1}{2}\left[\left[\begin{array}{c}{1} \\ {i}\end{array}\right]\left[\begin{array}{cc}{1} & {i}\end{array}\right]-\left[\begin{array}{c}{1} \\ {-i}\end{array}\right]\left[\begin{array}{cc}{1} & {-i}\end{array}\right]\right].$ \\  \\
+	Thirdly, we discuss $Z$. We set det$|Z-\lambda I |=0$, then\\  \\
 	$\left |\begin{bmatrix}1&0\\0&-1\end{bmatrix}-\begin{bmatrix}\lambda&0\\0&\lambda\end{bmatrix}\right|=0,$
 	%$\begin{bmatrix}1-\lambda&0\\0&-1-\lambda\end{bmatrix}=0$,\\  \\
 	$\left|\begin{array}{cccc}1-\lambda&0\\0&-1-\lambda \end{array}\right| =0. $ \\ \\
 
-	The $\lambda$ solutions are $1$ and $-1$.
+	The solution of $\lambda$ is $1$ or $-1$.
 	
-	When $\lambda_{1}=1$,
+	When $\lambda_{1}=1$, calculate
     	$(Z-\lambda_{1} I)|\lambda_{1}\rangle=0,$ \\  \\ 
 	$\begin{bmatrix}0&0\\0&-2\end{bmatrix}\begin{bmatrix}x_{1}\\x_{2}\end{bmatrix}=$
 	$\begin{bmatrix}0\\0\end{bmatrix}$. \\  
 	
-	The solution $x_{2}=0$. \\
+	The solution is $x_{2}=0$. \\
 	We  assume that $x_{1}=1$,
-	thus $\lambda_{1}=\begin{bmatrix}1\\0\end{bmatrix}$. 
+	thus $\ket{\lambda_{1}}=\begin{bmatrix}1\\0\end{bmatrix}$. 
 	\\
-	When $\lambda_{2}=-1$,
+	When $\lambda_{2}=-1$, calculate
     	$(Z-\lambda_{2} I )|\lambda_{2}\rangle=0,$ \\  \\
 	$\begin{bmatrix}2&0\\0&0\end{bmatrix}\begin{bmatrix}x_{1}\\x_{2}\end{bmatrix}=$
 	$\begin{bmatrix}0\\0\end{bmatrix}$. \\  \\ 
-	The solution $x_{1}=0$.\\
+	The solution is $x_{1}=0$.\\
 	We  assume that $x_{2}=1$,  \\ 
-	thus $\lambda_{2}=\begin{bmatrix}0\\1\end{bmatrix},
+	\\
+	thus $\ket{\lambda_{2}}=\begin{bmatrix}0\\1\end{bmatrix},
 	 Z=\begin{bmatrix}1&0\\0&-1\end{bmatrix} 
 	=\begin{bmatrix}1&0\\0&0\end{bmatrix}-\begin{bmatrix}0&0\\0&\-1\end{bmatrix}.$ \\ \\
-	So the diagonal representations of $Z$ is 
-	$Z=|0\rangle\langle 0 |-|1\rangle\langle 1|.$ \\  	
+	So the diagonal representation of $Z$ is $|0\rangle\langle 0 |-|1\rangle\langle 1|.$ \\  	
 	
 \textbf{Exercise 2.12:  } Prove that the matrix   $\begin{bmatrix}1&0\\1	&1\end{bmatrix}$ is not diagonalizable. 
 	\\ 
 \textbf{Answer:}\\
-		 \hspace*{0.6cm}The necessary and sufficient condition for diagonalization is that there are n linearly independent eigenvectors for n-order square matrices. According to the knowledge of linear algebra elementary transformation,\\ \\
-	 $\begin{bmatrix}1&0\\1&1\end{bmatrix}\xrightarrow{first\,\, line \,\,minus\,\, second\,\, line} \begin{bmatrix}1&0\\0&1\end{bmatrix}$. They have same eigenvalue $\lambda=1$ and the eigenvector  that  
-	$\begin{bmatrix}1&0\\1&1\end{bmatrix}\begin{bmatrix}x_{1}\\x_{2}\end{bmatrix}
-	=\begin{bmatrix}0\\0\end{bmatrix}$.
-	So the eigenvector is $\begin{bmatrix}0\\1\end{bmatrix}$. \\ \\
-	Only have one eigenvalue and eigenvector of the matrix does not satisfy the necessary and sufficient conditions, so the matrix is not diagonalizable. 
+	The necessary and sufficient condition for diagonalization is that there are n linearly independent eigenvectors for n-order square matrices. According to the knowledge of linear algebra elementary transformation,\\ \\
+	 $\begin{bmatrix}1&0\\1&1\end{bmatrix}\xrightarrow{second\,\, line \,\,minus\,\, first\,\, line} \begin{bmatrix}1&0\\0&1\end{bmatrix}$. They have same eigenvalue $\lambda=1.$\\Then we compute the eigenvectors,
+	$\begin{bmatrix}0&0\\1&0\end{bmatrix}\begin{bmatrix}x_{1}\\x_{2}\end{bmatrix}
+	=\begin{bmatrix}0\\0\end{bmatrix}$.\\
+	Thus we get the solution is $x_{1}=0$, and we set $x_{2}=1$. So the eigenvector is $k\begin{bmatrix}0\\1\end{bmatrix}$,  $k\neq0$. \\ \\
+	Only have one eigenvalue and one anti-linearly dependent eigenvector of the matrix does not satisfy the necessary and sufficient conditions, so the matrix is not diagonalizable. 
 	\\
-	
 	
 \textbf{Exercise 2.13:} If $|w\rangle$ and $|v\rangle$ are any two vectors, show that $(|w\rangle\langle v|)^{\dagger}=|v\rangle\langle w|$. \\
 \textbf{Answer:}\\
-	 \hspace*{0.6cm}Suppose $A$ is any linear operator on a Hilbert space $V$. It turns out that there exists a unique linear operator $A^{\dagger}$ on $ V$ such that for all vectors $ |w\rangle ,| v\rangle \in V$. \\ 
-	Since $(AB)^{\dagger}=B^{\dagger}A^{\dagger}$ and  $|v\rangle^{\dagger}\equiv\langle v|$, $(|v\rangle\langle w|)^{\dagger}=\langle w|^{\dagger} | v\rangle^{\dagger}=|w\rangle\langle v|$. \\ \\
-	
-	
+	Suppose $A　,B$ is any linear operator on a Hilbert space $V$. For all vectors $ |w\rangle ,| v\rangle \in V$, \\ 
+	since $(AB)^{\dagger}=B^{\dagger}A^{\dagger}$ and  $|v\rangle^{\dagger}\equiv\langle v|$, we can get $(|v\rangle\langle w|)^{\dagger}=\langle w|^{\dagger} | v\rangle^{\dagger}=|w\rangle\langle v|$. 
+	\\ \\
 \textbf{Exercise 2.14:(Anti-linearity of the adjoint)} Show that the adjoint operation is anti-linear,
 	 $\left(\sum_{i} a_{i} A_{i}\right)^{\dagger}=\sum_{i} a_{i}^{*} A_{i}^{\dagger}$. \\  
 \textbf{Answer:}\\
-	 	 \hspace*{0.6cm}Suppose $A$ is any linear operator on a Hilbert space $V$. It turns out that there exists a unique linear operator $A^{\dagger}$ on $ V$ such that for all vectors $ |w\rangle ,| v\rangle \in V$. 
+	 	Suppose $A_{i}$ is any linear operator on a Hilbert space $V$ and we set all vectors $ |w\rangle ,| v\rangle \in V$. 
 According to  inner product is linear in the second argument and  conjugate-linear in the first argument, we can make the 	following derivation: 
 
 	$\left(|v\rangle, \sum_{i} a_{i}^{*} A_{i}^{\dagger}\left|w_{i}\right\rangle\right)$ 
-	$= \sum_{i} a_{i}^{*}  A_{i}^{\dagger}\left(|v\rangle,\left|w_{i}\right\rangle\right)$  \\
+	$= \sum_{i} a_{i}^{*} \left(|v\rangle,A_{i}^{\dagger}\left|w_{i}\right\rangle\right)$  \\
 	$=\sum_{i} a_{i}^{*} \left(A_{i}|v\rangle,\left|w_{i}\right\rangle\right)$
-	$=\left(\sum_{i} a_{i}A_{i}|v\rangle,\left|w_{i}\right\rangle\right)
-	=\left( \sum_{i} a_{i} A_{i}\right)^{\dagger}\left(|v\rangle,\left|w_{i}\right\rangle\right)$
+	$=\left(\sum_{i} a_{i}A_{i}|v\rangle,\left|w_{i}\right\rangle\right)$
 	$=\left(|v\rangle, (\sum_{i} a_{i} A_{i})^{\dagger}\left|w_{i}\right\rangle\right)$.\\
-	Thus $(\sum_{i} a_{i} A_{i})^{\dagger}=\sum_{i} a_{i}^{*} A_{i}^{\dagger}$.  \\ 
+	Thus the adjoint operation is anti-linear, $(\sum_{i} a_{i} A_{i})^{\dagger}=\sum_{i} a_{i}^{*} A_{i}^{\dagger}$.  \\ 
 	
 \textbf{Exercise 2.15:} Show that $\left(A^{\dagger}\right)^{\dagger}=A.$  \\
 	\textbf{Answer:}\\
-		 	 \hspace*{0.6cm}Suppose $A$ is any linear operator on a Hilbert space $V$. It turns out that there exists a unique linear operator $A^{\dagger}$ on $ V$ such that for all vectors $ |w\rangle ,| v\rangle \in V$. \\ 
+	Suppose $A$ is any linear operator on a Hilbert space $V$ and we set  $ |w_{i}\rangle ,| v\rangle \in V$. \\ 
 Since $\left(|v\rangle, A^{\dagger}|w\rangle\right)=\left(A^{\dagger}|w\rangle,|v\rangle\right)^{*}=\left(|w\rangle, A|v\rangle\right)^{*}=\left(A|v\rangle,|w\rangle\right)$
 	and $\left(|v\rangle, A^{\dagger}|w\rangle\right)=\left[\left(A^{\dagger}\right)^{\dagger}|v\rangle,|w\rangle\right].$
 	\\
-	Thus $\left(A^{\dagger}\right)^{\dagger}=A$.\\
-	\\
-\textbf{Exercise 2.16:} Show that any projector $P$ satisfies the equation $P^{2}=P$ \\
+	Thus we proved that $\left(A^{\dagger}\right)^{\dagger}=A$.
+	\\  \\ 
+\textbf{Exercise 2.16:} Show that any projector $P$ satisfies the equation $P^{2}=P$. \\
 \textbf{Answer:}\\
-	 \hspace*{0.6cm}Suppose $V$ is a Hermite space, $W$ be the k-dimensional subspace of d-dimensional vector space $V$. Using the gram Schimdt process, we can construct $ \ket{1} \ket{2} . . .\ket{d}$ is a set of standard orthogonal basis of $V$, so that $ \ket{1} \ket{2} . . .\ket{k} $is a standard orthogonal basis of $W  ,P \equiv \sum_{i=1}^{k}|i\rangle\langle i|$ \\ \\
-	$\begin{aligned} P^{2} &=(\sum_{i=1}^{k}|i\rangle\langle i|)(\sum_{j=1}^{k}|j\rangle\langle j|)=\sum_{i=1}^{k}\sum_{j=1}^{k}|i\rangle\langle i | j\rangle\langle j| \\ 	&=\sum_{i=1}^{k}\sum_{j=1}^{k}|i\rangle \delta_{i j}\langle j|=\sum_{i=1}^{k}| i\rangle\langle i|=P. \end{aligned}$\\  \\ \\
+	Suppose $V$ is a  Hermite space, $W$ is the k-dimensional subspace of d-dimensional vector space $V$. Using the Gram-Schimdt process, we can construct $ \ket{1}, \ket{2}, . . .\ket{d}$ as a set of standard orthogonal basis of $V$, so that $ \ket{1}, \ket{2}, . . .\ket{k} $is a standard orthogonal basis of $W  ,P \equiv \sum_{i=1}^{k}|i\rangle\langle i|.$ \\ \\
+	The proof process is as follows: \\
+	$\begin{aligned} P^{2} &=(\sum_{i=1}^{k}|i\rangle\langle i|)(\sum_{j=1}^{k}|j\rangle\langle j|)=\sum_{i=1}^{k}\sum_{j=1}^{k}|i\rangle\langle i | j\rangle\langle j| \\ 	&=\sum_{i=1}^{k}\sum_{j=1}^{k}|i\rangle \delta_{i j}\langle j|=\sum_{i=1}^{k}| i\rangle\langle i|=P. \end{aligned}$\\  \\  
+	\\
 \textbf{Exercise 2.17:} Show that a normal matrix is Hermitian if and only if it has real eigenvalues.
 	\\ 
 	\textbf{Answer:}\\
-	 \hspace*{0.6cm}Suppose $P\equiv \sum_{i}\lambda_{i}|i\rangle\langle i|$ , thus  $P^{\dagger} = \sum_{i}\lambda_{i}^{*}|i\rangle\langle i|$.
-	Since $P$ is a Hermitian operators, we have $P=P^{\dagger}$, then $\sum_{i}\lambda_{i}|i\rangle\langle i|= \sum_{i}\lambda_{i}^{*}|i\rangle\langle i|$. Thus $\lambda_{i} =\lambda_{i}^{*}$, $\lambda_{i} \in R$.
-	\\	\\
+	Suppose A is a normal matrix, so it can be given a spectral decomposition,  $A= \sum_{i}\lambda_{i}|i\rangle\langle i|$ and  $A^{\dagger} = \sum_{i}\lambda_{i}^{*}|i\rangle\langle i|, (\lambda_{i}\geq 0)$. \\
+	Since $A$ is a Hermitian operators, we have $A=A^{\dagger}$, then $\sum_{i}\lambda_{i}|i\rangle\langle i|= \sum_{i}\lambda_{i}^{*}|i\rangle\langle i|$. Thus we can get $\lambda_{i} =\lambda_{i}^{*}$, then $\lambda_{i} \in R$.
+	Since $\lambda_{i} \in R$, we can get $\lambda_{i} =\lambda_{i}^{*}$ and $\sum_{i}\lambda_{i}|i\rangle\langle i|= \sum_{i}\lambda_{i}^{*}|i\rangle\langle i|$. Thus we can get $A=A^{\dagger}$. $A$ is  Hermitian. \\
+	Above all, we proved that a normal matrix is Hermitian if and only if it has real eigenvalues.
+	\\ \\
 \textbf{Exercise 2.18:} Show that all eigenvalues of a unitary matrix have modulus $1$, that is, can be written in the form $e^{i\theta}$ for some real ${\theta}$. \\
 \textbf{Answer:}\\
-	 \hspace*{0.6cm}Suppose $U$ is a unitary matrix,  $U\equiv \sum_{i}\lambda_{i}|i\rangle\langle i|$ , thus    $U^{\dagger} = \sum_{i}\lambda_{i}^{*}|i\rangle\langle i|$ and $U$ satisfies $U^{\dagger}U=I, I \equiv \sum_{i}|i\rangle\langle i|$. 
-	\\ 
-	${U U^{\dagger}=\left(\sum_{i} \lambda_{i}|i\rangle \langle i|\right)\left(\sum_{i} \lambda_{i}|i\rangle\langle i|\right)^{\dagger}=\sum_{i} \lambda_{i} \lambda_{i}^{*}|i\rangle\langle i|=I} \\ {\sum_{i} \lambda_{i} \lambda_{i}^{*}|i\rangle\langle i|=\sum_{i}| i\rangle\langle i| \Rightarrow \forall i, \lambda_{i} \lambda_{i}^{*}=1}$
+
+	 Suppose $U$ is a unitary matrix, thus $U$ is normal and can be given a spectral decomposition, $U= \sum_{i}\lambda_{i}|i\rangle\langle i|, (\lambda_{i}\geq 0)$.  The derivation process is as follows: \\
+	$U$ satisfies $UU^{\dagger}=I(I \equiv \sum_{i}|i\rangle\langle i|).$ \\
+	${U U^{\dagger}=\left(\sum_{i} \lambda_{i}|i\rangle \langle i|\right)\left(\sum_{i} \lambda_{i}|i\rangle\langle i|\right)^{\dagger}=\sum_{i} \lambda_{i} \lambda_{i}^{*}|i\rangle\langle i|=I}. \\ {\sum_{i} \lambda_{i} \lambda_{i}^{*}|i\rangle\langle i|=\sum_{i}| i\rangle\langle i| \Rightarrow \forall i, \lambda_{i} \lambda_{i}^{*}=1}$.
 	\\
-	Because $\lambda_{i} \lambda_{i}^{*}=1$, thus $\left\|\lambda_{i}\right\|=1$. \\ 
+	Since $\lambda_{i} \lambda_{i}^{*}=1$,  we can get $\left\|\lambda_{i}\right\|=1$. \\ 
 	Let $\lambda_{i}={e}^{i \theta}=\cos \theta+{i} \sin \theta$, then $ \lambda_{i}^{*}={e}^{-i \theta}=\cos \theta-{i} \sin \theta.$
 	\\
-	${e}^{i \theta}*{e}^{-i \theta}=(\cos \theta+{i} \sin \theta)*(\cos \theta-{i} \sin \theta)=1$
+	Since ${e}^{i \theta}*({e}^{i \theta})^{*}=(\cos \theta+{i} \sin \theta)*(\cos \theta-{i} \sin \theta)=1$, $\lambda_{i}$ can be written in the form ${e}^{i \theta}$ for some real $\theta$.
 	\\
 	\\  
-\textbf{Exercise 2.19:} (Pauli matrices: Hermitian and unitary) Show that the Pauli matrices are Hermitian and unitary.
+\textbf{Exercise 2.19: (Pauli matrices: Hermitian and unitary)} Show that the Pauli matrices are Hermitian and unitary. 
+\\
 \textbf{Answer:}\\
-	 \hspace*{0.6cm}For $Y$ be an example，\\
+	For $Y$ is an example.\\
 	Hermitian:\\
-	$Y^{\dagger}=\left(Y^{*}\right)^{\mathrm{T}}=\left(\left[\begin{array}{cc}{0} & {-i} \\ {-i} & {0}\end{array}\right]^{\mathrm{*}}	\right)^{\mathrm{T}}\\=\left[\begin{array}{cc}{0} & {-i} \\ {i} & {0}\end{array}\right]=Y.$ 
+	$Y^{\dagger}=\left(Y^{*}\right)^{\mathrm{T}}=\left(\left[\begin{array}{cc}{0} & {-i} \\ {i} & {0}\end{array}\right]^{\mathrm{*}}	\right)^{\mathrm{T}}=\left[\begin{array}{cc}{0} & {-i} \\ {i} & {0}\end{array}\right]=Y.$ 
 	\\ \\
 	 Unitary:\\
-	$\begin{aligned} Y^{\dagger} Y &=\left(Y^{*}\right)^{T} Y=\left(\left[\begin{array}{cc}{0} & {-i} \\ {i} & {0}\end{array}	\right]^{*}\right)^{T}\left[\begin{array}{cc}{0} & {-i} \\ {i} & {0}\end{array}\right]=\left[\begin{array}{cc}{0} & {i} \\ {-i} & {0}\end{array}\right]^{T}\left[\begin{array}{cc}{0} & {-i} \\ {i} & {0}\end{array}\right] \\ &=\left[\begin{array}{cc}{0} & {-i} \\ {i} & 	{0}\end{array}\right]\left[\begin{array}{cc}{0} & {-i} \\ {i} & {0}\end{array}\right]=\left[\begin{array}{cc}{1} & {0} \\ {0} & 	{1}\end{array}\right]=I \end{aligned}.$\\ 
+	$\begin{aligned} Y^{\dagger} Y &=\left(Y^{*}\right)^{T} Y=\left(\left[\begin{array}{cc}{0} & {-i} \\ {i} & {0}\end{array}	\right]^{*}\right)^{T}\left[\begin{array}{cc}{0} & {-i} \\ {i} & {0}\end{array}\right]=\left[\begin{array}{cc}{0} & {i} \\ {-i} & {0}\end{array}\right]^{T}\left[\begin{array}{cc}{0} & {-i} \\ {i} & {0}\end{array}\right] \\ &=\left[\begin{array}{cc}{0} & {-i} \\ {i} & 	{0}\end{array}\right]\left[\begin{array}{cc}{0} & {-i} \\ {i} & {0}\end{array}\right]=\left[\begin{array}{cc}{1} & {0} \\ {0} & 	{1}\end{array}\right]=I. \end{aligned}$\\ 
 	\\ \\
-	So $ Y$ is Hermite operator and unitary matrix. 
+	Thus $ Y$ is Hermitian and unitary. 
 	\\
 	Other cases will also reach corresponding conclusions according to the above calculations. 
 	\\ \\
-\textbf{Exercise 2.20:} (Basis changes) Suppose $A^{\prime}$ and  $A^{\prime\prime}$ are matrix representations of an
+\textbf{Exercise 2.20: (Basis changes)} Suppose $A^{\prime}$ and  $A^{\prime\prime}$ are matrix representations of an
 operator $A$ on a vector space $V$ with respect to two different orthonormal bases,$| v_{i}\rangle$ and $| w_{j}\rangle$.Then the elements of $A^{\prime}$  and $A^{\prime\prime}$ are $A_{i j}^{\prime}=\langle v_{i}|A| v_{j}\rangle$ and $A_{i j}^{\prime \prime}=\langle w_{i}|A| w_{j}\rangle$. Characterize the relationship between $A^{\prime}$ and  $A^{\prime\prime}$. \\
-Answer: \\ \hspace*{0.6cm}
-$\begin{aligned} U & \equiv \sum_{i}\left|w_{i}\right\rangle\left\langle v_{i}\right| \\ A_{i j}^{\prime} &=\left\langle v_{i}|A| v_{j}\right\rangle \\ &=\left\langle v_{i}\left|U U^{\dagger} A UU^{\dagger}\right| v_{j}\right\rangle \\ &=\sum_{p, q, r, s}\left\langle v_{i} | w_{p}\right\rangle\left\langle v_{p} | v_{q}\right\rangle\left\langle w_{q}|A| w_{r}\right\rangle\left\langle v_{r} | v_{s}\right\rangle\left\langle w_{s} | v_{j}\right\rangle \\ &=\sum_{p, q, r, s}\left\langle v_{i} | w_{p}\right\rangle \delta_{p q} A_{q r}^{\prime \prime} \delta_{r s}\left\langle w_{s} | v_{j}\right\rangle \\ &=\sum_{p, r}\left\langle v_{i} | w_{p}\right\rangle\left\langle w_{r} | v_{j}\right\rangle A_{p r}^{\prime \prime} \end{aligned}$
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	
+\textbf{Answer:}\\
+Suppose  $U \equiv \sum_{i}\left|w_{i}\right\rangle\left\langle v_{i}\right|, U$ is  unitary operator, then we can make the following derivation: \\
+	$\begin{aligned} A_{i j}^{\prime} &=\left\langle v_{i}|A| v_{j}\right\rangle \\ &=\left\langle v_{i}\left|U U^{\dagger} A UU^{\dagger}\right| v_{j}\right\rangle \\ &=\sum_{p, q, r, s}\left\langle v_{i} | w_{p}\right\rangle\left\langle v_{p} | v_{q}\right\rangle\left\langle w_{q}|A| w_{r}\right\rangle\left\langle v_{r} | v_{s}\right\rangle\left\langle w_{s} | v_{j}\right\rangle \\ &=\sum_{p, q, r, s}\left\langle v_{i} | w_{p}\right\rangle \delta_{p q} A_{q r}^{\prime \prime} \delta_{r s}\left\langle w_{s} | v_{j}\right\rangle \\ &=\sum_{p, r}\left\langle v_{i} | w_{p}\right\rangle\left\langle w_{r} | v_{j}\right\rangle A_{p r}^{\prime \prime}. \end{aligned}$ 
+	\\
+	Suppose P=$\sum_{i j}p_{i j}$ is a row elementary matrix and its elements are $p_{i j}= \bra{w_j}\ket{v_{i}}$, we can get  $A_{ij}^{\prime}=\sum_{p, r}p_{ip}^{*}A_{p r}^{\prime \prime}p_{jr}$.  Thus there is a row elementary matrix $P$ between $A$ and $B$ such that $A^{\prime}=P^{\dagger} A^{\prime\prime} P$ holds.
 	
 	
 \end{quote}

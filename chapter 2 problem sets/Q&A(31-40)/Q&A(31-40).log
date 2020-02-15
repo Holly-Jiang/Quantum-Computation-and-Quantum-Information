@@ -1,16 +1,14 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.10.30)  16 DEC 2019 10:40
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.10.30)  9 FEB 2020 15:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**Q&A(11-20).tex
-(./Q&A(11-20).tex
+**"/Users/jiangqianxi/Desktop/github/Quantum-Computation-and-Quantum-Information/chapter 2 problem sets/Q&A(31-40)/Q&A(31-40)"
+(/Users/jiangqianxi/Desktop/github/Quantum-Computation-and-Quantum-Information/chapter 2 problem sets/Q&A(31-40)/Q&A(31-40).tex
 LaTeX2e <2018-12-01>
-(/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/ctexart.cls
-(/usr/local/texlive/2019/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/ctexart.cls (/usr/local/texlive/2019/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2019-05-07 L3 programming layer (loader) 
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/l3kernel/expl3-code.tex
 Package: expl3 2019-05-07 L3 programming layer (code)
 \c_max_int=\count80
 \l_tmpa_int=\count81
@@ -158,38 +156,31 @@ Package: expl3 2019-05-07 L3 programming layer (code)
 \l__seq_internal_a_int=\count160
 \l__seq_internal_b_int=\count161
 \c__deprecation_minus_one=\count162
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
 File: l3xdvipdfmx.def 2019-04-06 v L3 Experimental driver: xdvipdfmx
 \g__driver_image_int=\count163
 \l__driver_pdf_tmp_box=\box45
 \g__driver_pdf_object_int=\count164
 \g__driver_pdf_annotation_int=\count165
 ))
-Document Class: ctexart 2019/04/07 v2.4.15 Chinese adapter for class article (C
-TEX)
+Document Class: ctexart 2019/04/07 v2.4.15 Chinese adapter for class article (CTEX)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2019-05-03 L3 Experimental document command parser
 \l__xparse_current_arg_int=\count166
 \g__xparse_grabber_int=\count167
 \l__xparse_m_args_int=\count168
 \l__xparse_v_nesting_int=\count169
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2019-05-03 LaTeX2e option processing using LaTeX3 keys
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/ctexhook.sty
 Package: ctexhook 2019/04/07 v2.4.15 Document and package hooks (CTEX)
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/ctexpatch.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/ctexpatch.sty
 Package: ctexpatch 2019/04/07 v2.4.15 Patching commands (CTEX)
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/fix-cm.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/fix-cm.sty
 Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.def
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/ms/everysel.sty
+)) (/usr/local/texlive/2019/texmf-dist/tex/latex/ms/everysel.sty
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
 \l__ctex_tmp_int=\count170
@@ -197,11 +188,9 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 \l__ctex_tmp_dim=\dimen134
 \g__ctex_section_depth_int=\count171
 \g__ctex_font_size_int=\count172
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
 File: ctexopts.cfg 2019/04/07 v2.4.15 Option configuration file (CTEX)
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
@@ -217,14 +206,11 @@ File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen135
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
 File: ctex-engine-xetex.def 2019/04/07 v2.4.15 XeLaTeX adapter (CTEX)
-(/usr/local/texlive/2019/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
 Package: xeCJK 2019/04/07 v3.7.2 Typesetting CJK scripts with XeLaTeX
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.st
-y
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
 Package: xtemplate 2019-05-03 L3 Experimental prototype document functions
 \l__xtemplate_tmp_dim=\dimen136
 \l__xtemplate_tmp_int=\count181
@@ -291,10 +277,8 @@ Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
 \l__xeCJK_verb_exspace_skip=\skip55
  (/usr/local/texlive/2019/texmf-dist/tex/latex/fontspec/fontspec.sty
 Package: fontspec 2019/03/15 v2.7c Font selection for XeLaTeX and LuaLaTeX
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2019/03/15 v2.7c Font selection for XeLaTeX and LuaLaTe
-X
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2019/03/15 v2.7c Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_script_int=\count193
 \l__fontspec_language_int=\count194
 \l__fontspec_strnum_int=\count195
@@ -309,29 +293,23 @@ X
 \l__fontspec_tmpa_dim=\dimen165
 \l__fontspec_tmpb_dim=\dimen166
 \l__fontspec_tmpc_dim=\dimen167
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/tuenc.def
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/tuenc.def
 File: tuenc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/fontspec/fontspec.cfg)
+)) (/usr/local/texlive/2019/texmf-dist/tex/latex/fontspec/fontspec.cfg)
 LaTeX Info: Redefining \itshape on input line 4051.
 LaTeX Info: Redefining \slshape on input line 4056.
 LaTeX Info: Redefining \scshape on input line 4061.
 LaTeX Info: Redefining \upshape on input line 4066.
 LaTeX Info: Redefining \em on input line 4096.
 LaTeX Info: Redefining \emph on input line 4121.
-))
-(/usr/local/texlive/2019/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+)) (/usr/local/texlive/2019/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
 File: xeCJK.cfg 2019/04/07 v3.7.2 Configuration file for xeCJK package
-))
-(/usr/local/texlive/2019/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
+)) (/usr/local/texlive/2019/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
 Package: xeCJKfntef 2019/04/07 v3.7.2 xeCJK font effect
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/ulem/ulem.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box48
 \UL@hyphenbox=\box49
 \UL@skip=\skip56
@@ -342,8 +320,7 @@ Package: xeCJKfntef 2019/04/07 v3.7.2 xeCJK font effect
 \ULC@box=\box50
 Package: ulem 2012/05/18
 \ULdepth=\dimen170
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/cjk/texinput/CJKfntef.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/cjk/texinput/CJKfntef.sty
 Package: CJKfntef 2015/04/18 4.8.4
 \CJK@fntefSkip=\skip57
 \CJK@nest=\count271
@@ -363,34 +340,23 @@ Package: CJKfntef 2015/04/18 4.8.4
 \l__ctex_ccglue_skip=\skip60
 )
 \l__ctex_ziju_dim=\dimen175
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/zhnumber/zhnumber.sty
 Package: zhnumber 2019/04/07 v2.7 Typesetting numbers with Chinese glyphs
 \l__zhnum_scale_int=\count272
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
 File: zhnumber-utf8.cfg 2019/04/07 v2.7 Chinese numerals with UTF8 encoding
 ))
 \l__ctex_heading_skip=\skip61
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese-a
-rticle.def
-File: ctex-scheme-chinese-article.def 2019/04/07 v2.4.15 Chinese scheme for art
-icle (CTEX)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese-article.def
+File: ctex-scheme-chinese-article.def 2019/04/07 v2.4.15 Chinese scheme for article (CTEX)
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
 File: ctex-name-utf8.cfg 2019/04/07 v2.4.15 Caption with encoding UTF8 (CTEX)
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/ctex-c5size.clo
+)) (/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/ctex-c5size.clo
 File: ctex-c5size.clo 2019/04/07 v2.4.15 c5size option (CTEX)
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-mac.def
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-mac.def
 File: ctex-fontset-mac.def 2019/04/07 v2.4.15 Mac OS X fonts definition (CTEX)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-macnew.
-def
-File: ctex-fontset-macnew.def 2019/04/07 v2.4.15 Mac OS X fonts definition for 
-El Capitan or later version (CTEX)
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-macnew.def
+File: ctex-fontset-macnew.def 2019/04/07 v2.4.15 Mac OS X fonts definition for El Capitan or later version (CTEX)
 
 
 Package fontspec Warning: Font "Songti SC Light" does not contain requested
@@ -418,28 +384,23 @@ Package fontspec Info: Font family 'SongtiSC(0)' created for font 'Songti SC'
 
 ))) (/usr/local/texlive/2019/texmf-dist/tex/latex/ctex/config/ctex.cfg
 File: ctex.cfg 2019/04/07 v2.4.15 Configuration file (CTEX)
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/physics/physics.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/physics/physics.sty
 Package: physics 
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip62
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks15
 \ex@=\dimen176
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen177
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count273
@@ -479,22 +440,17 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
+)) (/usr/local/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks20
-)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
-)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
-)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count285
@@ -509,12 +465,10 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen191
 \Gm@layoutvoffset=\dimen192
 \Gm@dimlist=\toks21
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/indentfirst.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
-)
-(./Q&A(11-20).aux)
-\openout1 = `Q&A(11-20).aux'.
+) (./Q&A(31-40).aux)
+\openout1 = `Q&A(31-40).aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
@@ -627,280 +581,159 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 19.
+(Font)              size <10.95> substituted on input line 21.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--57
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--57
+Underfull \hbox (badness 10000) in paragraph at lines 18--30
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--57
+Underfull \hbox (badness 10000) in paragraph at lines 31--44
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--57
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--57
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+Missing character: There is no 􏰞 in font [lmroman10-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--57
+Underfull \hbox (badness 10000) in paragraph at lines 57--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--57
+Underfull \hbox (badness 10000) in paragraph at lines 57--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--57
+Underfull \hbox (badness 10000) in paragraph at lines 57--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--57
+Underfull \hbox (badness 10000) in paragraph at lines 57--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--57
+Underfull \hbox (badness 10000) in paragraph at lines 57--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--57
+Underfull \hbox (badness 10000) in paragraph at lines 57--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--57
+Underfull \hbox (badness 10000) in paragraph at lines 57--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--57
+Underfull \hbox (badness 10000) in paragraph at lines 57--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--57
+Underfull \hbox (badness 10000) in paragraph at lines 57--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--57
+Underfull \hbox (badness 10000) in paragraph at lines 57--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--100
 
  []
 
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 60--85
+Underfull \hbox (badness 10000) in paragraph at lines 103--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--85
+Underfull \hbox (badness 10000) in paragraph at lines 103--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--85
+Underfull \hbox (badness 10000) in paragraph at lines 103--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--85
+Underfull \hbox (badness 10000) in paragraph at lines 103--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--85
+Underfull \hbox (badness 10000) in paragraph at lines 103--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--92
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--92
+Underfull \hbox (badness 10000) in paragraph at lines 103--149
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 93--108
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--108
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--108
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--108
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--108
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 109--119
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 109--119
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 109--119
-
- []
-
-Missing character: There is no 　 in font [lmroman10-regular]:mapping=tex-text;!
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--130
+Underfull \hbox (badness 10000) in paragraph at lines 152--158
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 131--137
+Underfull \hbox (badness 10000) in paragraph at lines 165--177
 
  []
 
 
-Overfull \hbox (19.31522pt too wide) in paragraph at lines 138--162
-\TU/lmr/m/n/10.53937 Since $[] \OT1/cmr/m/n/10.53937 = [][] = [][] = []$ \TU/lm
-r/m/n/10.53937 and $[] \OT1/cmr/m/n/10.53937 = [] \OML/cmm/m/it/10.53937 :$ 
+Overfull \hbox (40.47556pt too wide) in paragraph at lines 180--227
+\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 A; B\OT1/cmr/m/n/10.53937 )[] = ([](\OML/cmm/m/it/10.53937 A[]B\OT1/cmr/m/n/10.53937 ))[] = ([][] [] \OML/cmm/m/it/10.53937 A [] [] B []\OT1/cmr/m/n/10.53937 )[] = [][]([] \OML/cmm/m/it/10.53937 B []\OT1/cmr/m/n/10.53937 )[]([] \OML/cmm/m/it/10.53937 A[] []\OT1/cmr/m/n/10.53937 )[] = [][]([] \OML/cmm/m/it/10.53937 B[] []\OT1/cmr/m/n/10.53937 )([] \OML/cmm/m/it/10.53937 A []\OT1/cmr/m/n/10.53937 )[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--162
+Underfull \hbox (badness 10000) in paragraph at lines 180--227
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--162
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--162
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--162
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--162
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--162
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 163--194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--194
-
- []
-
-[5] [6] (./Q&A(11-20).aux)
+[4] [5] (./Q&A(31-40).aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 17608 strings out of 492916
- 397682 string characters out of 6133344
- 465389 words of memory out of 5000000
- 21532 multiletter control sequences out of 15000+600000
- 537632 words of font info for 66 fonts, out of 8000000 for 9000
+ 17627 strings out of 492916
+ 399343 string characters out of 6133344
+ 474389 words of memory out of 5000000
+ 21553 multiletter control sequences out of 15000+600000
+ 537616 words of font info for 64 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 60i,15n,73p,694b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,8n,73p,682b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Q&A(11-20).pdf (6 pages).
+Output written on Q&A(31-40).pdf (5 pages).

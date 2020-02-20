@@ -10,47 +10,60 @@
  \setlength{\parindent}{2em}
 \geometry{a4paper,scale=0.8}
 \begin{document}
-	\title{\textbf{Q\&A（2.51-2.60）}\\[1ex]\begin{large}
+	\title{\textbf{Q\&A（2.61-2.70）}\\[1ex]\begin{large}
 		\end{large}}
 	\author{LuoTingyu\quad JiangHui}
 	\maketitle
 \begin{quote}
-\textbf{Exercise 2.51: } Verify that the Hadamard gate H is unitary.
+\textbf{Exercise 2.61: } Calculate the probability of obtaining the result 
+$+1$ for a measurement $\vec{v}\cdot \vec{\sigma}$, given that the state 
+prior to measurement is $\ket{0}$. What is the state of the system after 
+the measurement if $+1$ is obtained?
 \\
 \textbf{Answer:}\\
-$H^{\dagger}H=\frac{1}{\sqrt{2}}\begin{bmatrix}
-	1 & 1 \\1 & -1
-\end{bmatrix}
-\frac{1}{\sqrt{2}}\begin{bmatrix}
-	1 & 1 \\1 & -1
-\end{bmatrix}
-=\frac{1}{2}\begin{bmatrix}
-	2 & 0 \\0 & 2
-\end{bmatrix}
-=\begin{bmatrix}
-	1 & 0 \\0 & 1
-\end{bmatrix}
-=I$.
+\begin{equation}
+	\begin{aligned}
+		p(+1)=&\bra{0}\ket{\lambda_{1}}\bra{\lambda_{1}}\ket{0} \\
+			 =&\frac{1}{2}\bra{0}(I+\vec{v}\cdot\vec{\sigma})\ket{0} \\
+			 =&\frac{1}{2}\begin{bmatrix}
+				 1 & 0
+			 \end{bmatrix}\begin{bmatrix}
+				1+v_{3} & v_{1}-iv_{2} \\ v_{1}+iv_{2} & 1-v_{3}
+			\end{bmatrix}
+			\begin{bmatrix}
+				1 \\ 0
+			\end{bmatrix}
+			\\
+			=&\frac{1}{2}(1+v_{3}).
+	\end{aligned}
+\end{equation} 
+The state of the quantum system immediately after the measurement is
 \\
-Thus the Hadamard gate H is unitary.
+\begin{equation}
+	\begin{aligned}
+		\frac{\ket{\lambda_{1}}\bra{\lambda_{1}}\ket{0}}{\sqrt{p(+1)}}=&
+		\frac{\ket{\lambda_{1}}\bra{\lambda_{1}}\ket{0}}{\sqrt{\frac{1}{2}(1+v_{3})}}\\
+		=&\frac{1}{\sqrt{\frac{1}{2}(1+v_{3})}}*\frac{1}{2}\begin{bmatrix}
+			1+v_{3} & v_{1}-iv_{2} \\ v_{1}+iv_{2} & 1-v_{3}
+		\end{bmatrix}
+		\begin{bmatrix}
+			1 \\ 0
+		\end{bmatrix}\\
+		=&\frac{1}{\sqrt{\frac{1}{2}(1+v_{3})}}\frac{1}{2}
+		\begin{bmatrix}
+			1+v_{3} \\v_{1}+iv_{2}
+		\end{bmatrix} \\
+		=&\sqrt{\frac{1+v_{3}}{2}}\begin{bmatrix}
+			1 \\ \frac{v_{1}+iv_{2}}{1+v_{3}}
+		\end{bmatrix}.
+	\end{aligned}
+\end{equation}
 \\
 \\
-\textbf{Exercise 2.52:  } Verify that $H^{2} = I.$
+\textbf{Exercise 2.62:  } Show that any measurement where the measurement operators and the
+POVM elements coincide is a projective measurement.
 \\
 \textbf{Answer:}\\
-$H^{2}=\frac{1}{\sqrt{2}}\begin{bmatrix}
-	1 & 1 \\1 & -1
-\end{bmatrix}
-\frac{1}{\sqrt{2}}\begin{bmatrix}
-	1 & 1 \\1 & -1
-\end{bmatrix}
-=\frac{1}{2}\begin{bmatrix}
-	2 & 0 \\0 & 2
-\end{bmatrix}
-=\begin{bmatrix}
-	1 & 0 \\0 & 1
-\end{bmatrix}
-=I$.
 \\
 \\
 \textbf{Exercise 2.53:} What are the eigenvalues and eigenvectors of $H$?
@@ -220,46 +233,8 @@ and that the projectors onto the corresponding eigenspaces are given
 	\end{aligned}
 	\end{equation}
 	Eigenvalues are $λ = \pm1.$
-	if $\lambda=1$
-	\begin{equation}
-		\begin{aligned}
-			\vec{v}\cdot\vec{\sigma}-\lambda I=& \vec{v}\cdot\vec{\sigma}-I\\
-											  =&\begin{bmatrix}
-												  v_{3}-1 & v_{1}-iv_{2}\\
-												  v_{1}+iv_{2} & -v_{3}-1
-											  \end{bmatrix} \\
-	\end{aligned} 
-	\end{equation}
-	Normalized eigenvector is $\ket{\lambda_{1}}=\sqrt{\frac{1+v_{3}}{2}}
-	\begin{bmatrix}
-		1 \\ \frac{1-v_{3}}{v_{1}-iv_{2}}
-	\end{bmatrix}$.
-	\begin{equation}
-		\begin{aligned}
-			\ket{\lambda_{1}}\bra{\lambda_{1}}=&\frac{1+V_{3}}{2}\begin{bmatrix}
-				1 \\ \frac{1-v_{3}}{v_{1}-iv_{2}}
-			\end{bmatrix}
-			\begin{bmatrix}
-				1 & \frac{1-v_{3}}{v_{1}+iv_{2}}
-			\end{bmatrix} \\
-			=&\frac{1+v_{3}}{2} \begin{bmatrix}
-				1 & \frac{v_{1}-iv_{2}}{1+v_{3}}\\
-				\frac{v_{1}+iv_{2}}{1+v_{3}} & \frac{1-v_{3}}{1+v_{3}} 
-			\end{bmatrix}\\
-			=&\frac{1}{2}\begin{bmatrix}
-				1+v_{3} & v_{1}-iv_{2} \\ v_{1}+iv_{2} & 1-v_{3}
-			\end{bmatrix}\\
-			=& \frac{1}{2}\left(I+\begin{bmatrix}
-				v_{3} & v_{1}-iv_{2} \\v_{1}+iv_{2} & -v_{3}
-			\end{bmatrix}\right)\\
-			=& \frac{1}{2}(I+\vec{v}\cdot\vec{\sigma}).
-		\end{aligned}
-	\end{equation}
-	If $\lambda=-1$. \\
-	Normalized eigenvalue is$\ket{\lambda_{-1}}=\sqrt{\frac{1-v_{3}}{2}}\begin{bmatrix}
-		1 \\ -\frac{1+v_{3}}{v_{1}-iv_{2}}
-	\end{bmatrix}$. \\
-	Similarly, we can get the $\ket{\lambda_{-1}}\bra{\lambda_{-1}}=\frac{1}{2}(I-\vec{v}\cdot\vec{\sigma})$.
+未完
+
 \end{quote}
 
 \end{document}

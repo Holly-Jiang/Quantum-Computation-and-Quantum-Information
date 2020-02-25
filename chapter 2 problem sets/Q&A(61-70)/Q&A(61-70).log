@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.10.30)  19 FEB 2020 17:58
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.10.30)  23 FEB 2020 15:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -593,94 +593,111 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--42
 
  []
 
-Missing character: There is no λ in font cmmi10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--93
+Underfull \hbox (badness 10000) in paragraph at lines 60--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--93
+Underfull \hbox (badness 10000) in paragraph at lines 60--69
 
  []
 
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 101--108
+Underfull \hbox (badness 10000) in paragraph at lines 76--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--108
+Underfull \hbox (badness 10000) in paragraph at lines 83--94
 
  []
 
-Missing character: There is no ≡ in font [lmroman10-regular]:mapping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--129
+Underfull \hbox (badness 10000) in paragraph at lines 101--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--129
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 135--151
+Underfull \hbox (badness 10000) in paragraph at lines 141--148
+
+ []
+
+Missing character: There is no ′ in font [lmroman10-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--179
+Underfull \hbox (badness 10000) in paragraph at lines 152--164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--179
+Underfull \hbox (badness 10000) in paragraph at lines 168--183
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--183
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 190--197
+Missing character: There is no ， in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ， in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ， in font [lmroman10-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--197
+Underfull \hbox (badness 10000) in paragraph at lines 219--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--213
+Underfull \hbox (badness 10000) in paragraph at lines 219--230
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 205--213
-
- []
-
-Missing character: There is no λ in font cmmi10!
-[4] (./Q&A(61-70).aux)
+[4] [5] (./Q&A(61-70).aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 17595 strings out of 492916
- 397213 string characters out of 6133344
- 465389 words of memory out of 5000000
- 21521 multiletter control sequences out of 15000+600000
+ 17615 strings out of 492916
+ 398581 string characters out of 6133344
+ 467389 words of memory out of 5000000
+ 21541 multiletter control sequences out of 15000+600000
  537616 words of font info for 64 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,14n,73p,480b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Q&A(61-70).pdf (4 pages).
+Output written on Q&A(61-70).pdf (5 pages).

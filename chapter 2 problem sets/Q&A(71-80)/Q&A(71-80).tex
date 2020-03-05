@@ -1,0 +1,398 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{indentfirst} 
+ %\mathinner{\langle a | }\quad \mathinner{ | b \rangle}
+% \def\bra#1{\mathinner{\langle{#1}}
+
+
+ \setlength{\parindent}{2em}
+\geometry{a4paper,scale=0.8}
+\begin{document}
+	\title{\textbf{Q\&A（2.71-2.80）}\\[1ex]\begin{large}
+		\end{large}}
+	\author{LuoTingyu\quad JiangHui}
+	\maketitle
+\begin{quote}
+\textbf{Exercise 2.71:  (Criterion to decide if a state is mixed or pure) } Let $\rho$ be a density operator. 
+Show that $tr(\rho_{2}) \leq 1$, with equality if and only if $\rho$ is a pure state.
+\\
+\textbf{Answer:}\\
+\begin{enumerate}
+	\item 
+	Since $\rho$ is positive, it must have a spectral decomposition,$\rho=\sum_{i}\lambda_{i}\ket{i}\bra{i} $\\
+the result of $	\sum_{i}\ket{i}\bra{i}$ is a matrix, and the Diagonal elements is $\sum_{i}\lambda_{i}\bra{i}\ket{i}$ for $0\leq \lambda_{i}\leq 1$.
+\begin{equation}
+	\begin{aligned}
+	 \rho^{2}=&\sum_{ij}\lambda_{i}\lambda_{j}\ket{i}\bra{i}\ket{j}\bra{j} \\
+			 =&\sum_{i}\lambda_{i}^{2}\ket{i}\bra{i} \\
+			 tr(\rho^{2})=&tr(\sum_{i}\lambda_{i}^{2}\ket{i}\bra{i} )\\
+					=&\sum_{i}\lambda_{i}^{2}tr(\ket{i}\bra{i}) \\
+					=&\sum_{i}\lambda_{i}^{2}\bra{i}\ket{i} \\
+					=&\sum_{i}\lambda_{i}^{2}
+	\end{aligned}
+\end{equation} 
+Since $\lambda_{i} \geq \lambda_{i}^{2}$ and $\sum_{i}\lambda_{i}=1$, then $\sum_{i}\lambda_{i}^{2}\leq \sum_{i}\lambda_{i} =1$.
+When $\lambda_{i}=1$, it's a pure state. \\
+$\rho =\sum_{i}\lambda_{i}\ket{i}\bra{i}= \sum_{i}\ket{i}\bra{i}$\\
+$tr(\rho^{2})=tr(\sum_{ij}\ket{i}\bra{i}\ket{j}\bra{j})$
+\\
+\\
+\textbf{Exercise 2.72: (Bloch sphere for mixed states)  } The Bloch sphere picture for pure states of a single qubit was introduced in Section 1.2. This description has an important generalization to mixed states as follows.
+\begin{enumerate}
+	\item Show that an arbitrary density matrix for a mixed state qubit may be written as
+
+\begin{equation}
+	\begin{aligned}
+		\rho=\frac{I+\vec{r}\cdot \vec{\sigma}}{2},
+	\end{aligned}
+\end{equation}
+where $\vec{r}$ is a real three-dimensional vector such that $|| \vec{r}||\leq 1$. This vector is
+known as the $Bloch $ $vector$ for the state $\rho$.
+\item What is the $Bloch$ $ vector$ representation for the state $\rho=I/2$?
+\item Show that a state $\rho$ is pure if and only if $|| \vec{r}|| = 1$.
+\item  Show that for pure states the description of the $Bloch $ $vector$ we have given
+coincides with that in Section 1.2.\\
+\end{enumerate}
+\textbf{Answer:}\\
+Since density matrix is Hermitain, matrix representation is $\rho=\begin{bmatrix}
+	a & b \\ b^{*} & d
+\end{bmatrix}, a,d \in R$ and $b \in C$. Because $\rho$ is density matrix, $\rho=a+d=1$.\\
+Define $a=\frac{(1+r_{3})}{2}$, $d=\frac{(1-r_{3})}{2}$ and $b=\frac{(r_1-ir_{2})}{2}$, $r_{i} \in R $. \\
+In this case,\\
+\begin{equation}
+	\begin{aligned}
+		\vec{r}\cdot \vec{\sigma}=&r_{1}\sigma_{1}+r_{2}\sigma_{2}+r_{3}\sigma_{3} \\
+								 =&\begin{bmatrix}
+									r_{3} &(r_1-ir_{2}) \\
+									(r_1+ir_{2}) &-r_{3}
+								\end{bmatrix}\\
+		\rho=&\begin{bmatrix}
+			a & b \\ b^{*} & d
+		\end{bmatrix} \\
+		=&\frac{1}{2}\begin{bmatrix}
+			(1+r_{3})& (r_1-ir_{2}) \\
+			(r_1+ir_{2}) & (1-r_{3})
+		\end{bmatrix}\\
+		=&\frac{1}{2}\begin{bmatrix}
+			1 & 0 \\ 0 &1
+		\end{bmatrix}+
+		\begin{bmatrix}
+			r_{3} &(r_1-ir_{2}) \\
+			(r_1+ir_{2}) &-r_{3}
+		\end{bmatrix}\\
+		=&\frac{1}{2}(I+\vec{r}\cdot \vec{\sigma}).
+	\end{aligned}
+\end{equation}  
+Thus for arbitrary density matrix ρ can be written as $\rho=\frac{I+\vec{r}\cdot \vec{\sigma}}{2}$.\\
+Next, we prove the condition that $|| \vec{r}||\leq 1$.
+\\
+Since $\rho$ is a positive operator, then the eigenvalues of $\rho$ are non-negative.
+\begin{equation}
+	\begin{aligned}
+		det(\rho-\lambda I)=&det\left(\frac{1}{2}\begin{bmatrix}
+			(1+r_{3})-\lambda & (r_1-ir_{2}) \\
+			(r_1+ir_{2}) & (1-r_{3})-\lambda
+		\end{bmatrix}
+		\right) \\
+		=&(\frac{1}{4}(1+r_{3})-\lambda)((1-r_{3})-\lambda)-\frac{1}{4}(r_1-ir_{2}) (r_1+ir_{2}) \\
+		=&\frac{1}{4}(\lambda^{2}-\lambda+1-r_{3}^{2}-(r_{1}^{2}+r_{2}^{2})) \\
+		=&\frac{1}{4}(\lambda^{2}-\lambda+1-|\vec{r}|^{2}) \\
+		=&0 \\
+		\lambda=&\frac{1\pm \sqrt{1-4*\frac{1}{4}(1-|\vec{r}|^{2})}}{2}  \\
+			   =&\frac{1\pm |\vec{r}|}{2}  \\
+			   \geq 0
+	\end{aligned}
+\end{equation}
+Since $\frac{1- |\vec{r}|}{2} \geq 0 \rightarrow |\vec{r}|\leq 1$.
+\item $\rho=\frac{I}{2}=\frac{1}{2}\begin{bmatrix}
+	(1+r_{3})& (r_1-ir_{2}) \\
+	(r_1+ir_{2}) & (1-r_{3})
+\end{bmatrix}$
+\\
+$r_{3}=0,$ $ r_{1}=ir_{2}=0 $, thus $Bloch$ $ vector$  is $\vec{r}=(0,0,0)$ and in the center of the ball.
+\\
+\item  \begin{equation}
+	\begin{aligned}
+		\rho^{2}=&\frac{I+\vec{r}\cdot \vec{\sigma}}{2}\frac{I+\vec{r}\cdot \vec{\sigma}}{2} \\
+				=&\frac{1}{4}\left(I+2\vec{r}\cdot \vec{\sigma}+\vec{r}\cdot \vec{\sigma}\vec{r}\cdot \vec{\sigma}\right)\\
+				=&\frac{1}{4}\left(I+2\vec{r}\cdot \vec{\sigma}+(r_{1}\sigma_{1}+r_{2}\sigma_{2}+r_{3}\sigma_{3})(r_{1}\sigma_{1}+r_{2}\sigma_{2}+r_{3}\sigma_{3})\right)\\
+				=&\frac{1}{4}\left(I+2\vec{r}\cdot \vec{\sigma}+(\sum_{ij}r_{i}r_{j}(\delta_{ij}I+\sum_{k=1}^{3}\epsilon_{ijk}\sigma_{k}))\right)\\
+				=&\frac{1}{4}\left(I+2\vec{r}\cdot \vec{\sigma}+(r_{1}r_{2}\sigma_{3}-r_{2}r_{1}\sigma_{3}-r_{1}r_{3}\sigma_{2}+r_{3}r_{1}\sigma_{2}
+				+r_{2}r_{3}\sigma_{1}-r_{3}r_{2}\sigma_{1}+r_{1}r_{1}I+r_{2}r_{2}I+r_{3}r_{3}I)\right) \\
+				=&\frac{1}{4}\left(I+2\vec{r}\cdot \vec{\sigma}+||\vec{r}||^{2}I\right) \\
+	tr(\rho^{2})=&\frac{1}{4}(2+2||\vec{r}||^{2}) (\because tr(\sigma_{i})=0,i=1,2,3) \\
+				=&\frac{1}{2}(1+||\vec{r}||^{2})\\
+	\end{aligned}
+\end{equation}
+If $\rho$ is pure, then $tr(rho^{2})=1 $.\\
+\begin{equation}
+	\begin{aligned}
+		tr(rho^{2})=&\frac{1}{2}(1+||\vec{r}||^{2})=1 \\
+				    &1+||\vec{r}||^{2}=2 \\
+					&||\vec{r}||^{2}=1 \\
+					&||\vec{r}||=1 
+	\end{aligned}
+\end{equation}
+Conversely, if $||\vec{r}||=1$, then $tr(\rho^{2})=\frac{1}{2}(1+||\vec{r}||^{2})=1$. Therefore, $\rho$ is pure.
+\\
+\item 
+\end{enumerate}
+\textbf{Exercise 2.73:} Let $\rho$ be a density operator. A \emph{minimal ensemble}  
+for $\rho$ is an ensemble $\{p_{i},\ket{\psi_{i}}\} $ containing a number of elements equal to the rank of $\rho$.
+ Let $\ket{\psi}$ be any state in the support of $\rho$. (The support of a Hermitian operator $A$ is the vector
+  space spanned by the eigenvectors of $A$ with non-zero eigenvalues.) Show that there is a minimal 
+  ensemble for $\rho$ that contains $\ket{\psi}$ , and moreover that in any such ensemble  $\ket{\psi}$  must appear with probability
+   \\
+   \begin{equation}
+	   \begin{aligned}
+		   p_{i}=&\frac{1}{\bra{\psi_{i}}\rho^{-1}\ket{\psi_{i}}},
+	   \end{aligned}
+   \end{equation}
+   where $\rho^{-1}$ is defined to be the inverse of $\rho$, when  $\rho$ is considered as an operator
+	acting only on the support of  $\rho$. (This definition removes the problem that  $\rho$ may not have an inverse.)
+	\\
+\textbf{Answer:}\\
+The density operator $\rho$ can be spectral decomposition, $\rho=\sum_{i}\lambda_{i}\ket{i}\bra{i}, \lambda_{i}>0 $,
+ then $\rho^{-1}=\sum_{i}\frac{1}{\lambda_{i}}\ket{i}\bra{i}$, Obviously, $\{\sqrt{\lambda_{i}}, \ket{i} \}$ is a minimal 
+ ensemble for $\rho$ (note: a number of $\sqrt{\lambda_{i}}$  equal to the rank of density operator $\rho$).
+ Suppose $\{\sqrt{p_{i}}, \ket{\psi_{i}} \}$ is the \emph{minimal ensemble} of density operator $\rho$ and $\{p_{i}=\lambda_{i},\ket{\psi_{i}}\}$,  
+Since $\ket{\psi_{i}}=\sum_{j}a_{j}\ket{j} $, then $a_{j}=\bra{j}\ket{\psi_{j}}$, 
+According to  postulate 2, There is a unitary operator U and probability $p_{i}$, 
+so that $\ket{\psi_{i}}$ enters state $U\ket{\psi_{i}}$ with probability $\sqrt{p_{i}}$, so there is\\
+\begin{equation}
+	\begin{aligned}
+		\widetilde{\ket{\psi_{i}}}=\sqrt{p_{i}}\ket{\psi_{i}}=\sqrt{p_{i}}(\sum_{j}a_{j}\ket{j})
+		=\sum_{j}u_{ij}\widetilde{\ket{j}}=\sum_{j}u_{ij}\sqrt{\lambda_{j}}\ket{j}.
+	\end{aligned}
+\end{equation}
+Then $\sqrt{p_{i}}a_{j}=u_{ij}\sqrt{\lambda_{j}}$, after squaring both sides of the equation, $|u_{ij}|^{2}=p_{i}\frac{|a_{j}|^{2}}{\lambda_{j}}$.
+Since the sum of the squares of the elements in each row and column of an arbitrary unitary matrix is equal to 1, $\sum_{i}|u_{ij}|^{2}=1$.
+\begin{equation}
+	\begin{aligned}
+		p_{i}\sum_{j}\frac{|a_{j|^{2}}}{\lambda_{j}}=\lambda_{j}|u_{ij}|^{2}=1
+	\end{aligned}
+\end{equation}
+Also because $ \rho^{-1}=\sum_{i}\frac{1}{\lambda_{i}}\ket{i}\bra{i}$, $\sum_{j}\frac{|a_{j}|^{2}}{\lambda_{j}}=\bra{\psi_{i}}\rho^{-1}\ket{\psi_{i}}$, then:\\
+\begin{equation}
+	\begin{aligned}
+		p_{i}=\frac{1}{\sum_{j}\frac{|a_{j}|^{2}}{\lambda_{j}}}=\frac{1}{\bra{\psi_{i}}\rho^{-1}\ket{\psi_{i}}}
+	\end{aligned}
+\end{equation}
+ \\
+\\
+\textbf{Exercise 2.74: } Suppose a composite of systems $A$ and $B$ is in the state $\ket{a}\ket{b}$, 
+where $\ket{a}$ is a pure state of system $A$, and $\ket{b} $ is a pure state of system $B$. 
+Show that the reduced density operator of system $A$ alone is a pure state.\\
+\textbf{Answer:}\\
+\begin{equation}
+	\begin{aligned}
+		\rho^{AB}=&\ket{a}\bra{a}\otimes \ket{b}\bra{b} \\
+		 \rho^{A}=&tr_{B}(\rho^{AB}) \\
+				  =&\ket{a}\bra{a}tr(\ket{b}\bra{b}) \\
+				  =&\ket{a}\bra{a}\bra{b}\ket{b} \\
+				  =&\ket{a}\bra{a} \\
+ tr( (\rho^{A})^{2})=&tr(\ket{a}\bra{a}\ket{a}\bra{a}) \\
+				  =&tr(\ket{a}\bra{a})\\
+				  =&\bra{a}\ket{a} \\
+				  =&1 \\
+	\end{aligned}
+\end{equation}
+Thus $\rho^{A}$ is pure.
+	\\
+	\\
+\textbf{Exercise 2.75: } 
+For each of the four Bell states, find the reduced density operator for each qubit.
+\\
+\textbf{Answer:}\\
+Suppose the four Bell states which $\ket{\psi_{i}}$, i=1,2,3,4 are as follows.\\
+\begin{equation}
+	\begin{aligned}
+		\ket{\psi_{1}}=&\frac{\ket{00}+\ket{11}}{\sqrt{2}}\\
+		\ket{\psi_{2}}=&\frac{\ket{00}-\ket{11}}{\sqrt{2}}\\
+		\ket{\psi_{3}}=&\frac{\ket{10}+\ket{01}}{\sqrt{2}}\\
+		\ket{\psi_{4}}=&\frac{\ket{01}-\ket{10}}{\sqrt{2}}\\
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		\rho^{1}=&\frac{\ket{00}+\ket{11}}{\sqrt{2}}\frac{\bra{00}+\bra{11}}{\sqrt{2}}\\
+				=&\frac{\ket{00}\bra{00}+\ket{00}\bra{11}+\ket{11}\bra{00}+\ket{11}\bra{11}}{2} \\
+		 \rho^{A}=&tr_{B}(\frac{\ket{00}\bra{00}+\ket{00}\bra{11}+\ket{11}\bra{00}+\ket{11}\bra{11}}{2} ) \\
+				 =&\frac{ket{0}\bra{0}\bra{0}\ket{0}+\ket{0}\bra{1}\bra{0}\ket{1}+\ket{1}\bra{0}\bra{1}\ket{0}+\ket{1}\bra{1}\bra{1}\ket{1}}{2} \\
+				 =&\frac{\ket{0}\bra{0}+\ket{1}\bra{1}}{2}\\
+				 =&\frac{I}{2}\\
+				\end{aligned}
+			\end{equation}
+			\begin{equation}
+				\begin{aligned}
+		 \rho^{B}=&tr_{A}(\frac{\ket{00}\bra{00}+\ket{00}\bra{11}+\ket{11}\bra{00}+\ket{11}\bra{11}}{2} ) \\
+				 =&\frac{\ket{0}\bra{0}\bra{0}\ket{0}+\ket{0}\bra{1}\bra{0}\ket{1}+\ket{1}\bra{0}\bra{1}\ket{0}+\ket{1}\bra{1}\bra{1}\ket{1}}{2} \\
+				 =&\frac{\ket{0}\bra{0}+\ket{1}\bra{1}}{2}\\
+				 =&\frac{I}{2} \\
+				\end{aligned}
+			\end{equation}
+			\begin{equation}
+				\begin{aligned}
+			\rho^{2}=&\frac{\ket{00}-\ket{11}}{\sqrt{2}}\frac{\bra{00}-\bra{11}}{\sqrt{2}}\\
+					=&\frac{\ket{00}\bra{00}-\ket{00}\bra{11}-\ket{11}\bra{00}+\ket{11}\bra{11}}{2} \\
+			\rho^{A}=&tr_{B}(\frac{\ket{00}\bra{00}-\ket{00}\bra{11}-\ket{11}\bra{00}+\ket{11}\bra{11}}{2}) \\
+					=&\frac{\ket{0}\bra{0}\bra{0}\ket{0}-\ket{0}\bra{1}\bra{0}\ket{1}-\ket{1}\bra{0}\bra{1}\ket{0}+\ket{1}\bra{1}\bra{1}\ket{1}}{2}\\
+					=&\frac{\ket{0}\bra{0}+\ket{1}\bra{1}}{2}\\
+					=&\frac{I}{2} \\
+					\rho^{B}=&tr_{A}(\frac{\ket{00}\bra{00}-\ket{00}\bra{11}-\ket{11}\bra{00}+\ket{11}\bra{11}}{2}) \\
+					=&\frac{\ket{0}\bra{0}\bra{0}\ket{0}-\ket{0}\bra{1}\bra{0}\ket{1}-\ket{1}\bra{0}\bra{1}\ket{0}+\ket{1}\bra{1}\bra{1}\ket{1}}{2}\\
+					=&\frac{\ket{0}\bra{0}+\ket{1}\bra{1}}{2}\\
+					=&\frac{I}{2} \\
+				\end{aligned}
+			\end{equation}
+			\begin{equation}
+				\begin{aligned}
+			\rho^{3}=&\frac{\ket{10}+\ket{01}}{\sqrt{2}}\frac{\bra{10}+\bra{01}}{\sqrt{2}}\\
+					=&\frac{\ket{10}\bra{10}-\ket{10}\bra{01}-\ket{01}\bra{10}+\ket{01}\bra{01}}{2} \\
+			\rho^{A}=&tr_{B}(\frac{\ket{10}\bra{10}-\ket{10}\bra{01}-\ket{01}\bra{10}+\ket{01}\bra{01}}{2}) \\
+					=&\frac{\ket{1}\bra{1}\bra{0}\ket{0}-\ket{1}\bra{0}\bra{0}\ket{1}-\ket{0}\bra{1}\bra{1}\ket{0}+\ket{0}\bra{0}\bra{1}\ket{1}}{2}\\
+					=&\frac{\ket{0}\bra{0}+\ket{1}\bra{1}}{2}\\
+					=&\frac{I}{2} \\
+					\rho^{B}=&tr_{A}(\frac{\ket{10}\bra{10}-\ket{10}\bra{01}-\ket{01}\bra{10}+\ket{01}\bra{01}}{2}) \\
+					=&\frac{\ket{0}\bra{0}\bra{1}\ket{1}-\ket{0}\bra{1}\bra{1}\ket{0}-\ket{1}\bra{0}\bra{0}\ket{1}+\ket{1}\bra{1}\bra{0}\ket{0}}{2}\\
+					=&\frac{\ket{0}\bra{0}+\ket{1}\bra{1}}{2}\\
+					=&\frac{I}{2} \\
+				\end{aligned}
+			\end{equation}
+			\begin{equation}
+				\begin{aligned}
+			\rho^{4}=&\frac{\ket{01}-\ket{10}}{\sqrt{2}}\frac{\bra{01}-\bra{10}}{\sqrt{2}}\\
+					=&\frac{\ket{01}\bra{01}-\ket{01}\bra{10}-\ket{10}\bra{01}+\ket{10}\bra{10}}{2} \\
+			\rho^{A}=&tr_{B}(\frac{\ket{01}\bra{01}-\ket{01}\bra{10}-\ket{10}\bra{01}+\ket{10}\bra{10}}{2}) \\
+					=&\frac{\ket{0}\bra{0}\bra{1}\ket{1}-\ket{0}\bra{1}\bra{1}\ket{0}-\ket{1}\bra{0}\bra{0}\ket{1}+\ket{1}\bra{1}\bra{0}\ket{0}}{2}\\
+					=&\frac{\ket{0}\bra{0}+\ket{1}\bra{1}}{2}\\
+					=&\frac{I}{2} \\
+					\rho^{B}=&tr_{A}(\frac{\ket{01}\bra{01}-\ket{01}\bra{10}-\ket{10}\bra{01}+\ket{10}\bra{10}}{2}) \\
+					=&\frac{\ket{1}\bra{1}\bra{0}\ket{0}-\ket{1}\bra{0}\bra{0}\ket{1}-\ket{0}\bra{1}\bra{1}\ket{0}+\ket{0}\bra{0}\bra{1}\ket{1}}{2}\\
+					=&\frac{\ket{0}\bra{0}+\ket{1}\bra{1}}{2}\\
+					=&\frac{I}{2} \\
+	\end{aligned}
+\end{equation}
+\\
+\\
+\textbf{Exercise 2.76: } Extend the proof of the Schmidt decomposition to the case where $A$
+and $B$ may have state spaces of different dimensionality.\\
+\textbf{Answer:}\\
+\\
+\\
+\textbf{Exercise 2.77: } Suppose $ABC$ is a three component quantum system. 
+Show by example that there are quantum states $ \ket{\psi}$ of such systems
+ which can not be written in the form
+ \begin{equation}
+	 \begin{aligned}
+		 \ket{\psi}=\sum_{i}\lambda_{i}\ket{i_{A}}\ket{i_{B}}\ket{i_{C}}
+	 \end{aligned}
+ \end{equation}
+ where $\lambda_{i}$ are real numbers, and $\ket{i_{A}},\ket{i_{B}},\ket{i_{C}} $ 
+ are orthonormal bases of the respective systems.
+	\textbf{Answer:}\\
+	\\
+\\
+\textbf{Exercise 2.78: } Prove that a state $ \ket{\psi}$  of a composite system $AB$
+ is a product state if and only if it has Schmidt number 1. Prove that $ \ket{\psi}$ 
+  is a product state if and only if $\rho_{A}$ (and thus  $\rho_{B}$) are pure states.
+ \\
+\textbf{Answer:}\\
+If $\ket{\psi}$ of a composite system $AB$ is a product state, then the state $\ket{i_{A}} $ for systerm $A$ and $\ket{i_{B}}$ for systerm $B$, 
+so thst $\ket{\psi}=\ket{i_{A}}\ket{i_{B}}$. Therefore the Schmidt number is 1. \\
+Conversely, if Schmidt number is 1. $\ket{\psi}$ is written as $\ket{\psi}=\ket{i_{A}}\ket{i_{B}}$, thus $\ket{\psi}$ is a product state.
+	\\
+If $ \ket{\psi}$ is a product state, $\ket{\psi}=\ket{i_{A}}\ket{i_{B}}$.\\
+\begin{equation}
+	\begin{aligned}
+		\rho^{AB}=&\ket{i_{A}}\bra{i_{A}}\otimes \ket{i_{B}}\bra{i_{B}} \\
+		 \rho^{A}=&tr_{B}(\rho^{AB}) \\
+				  =&\ket{i_{A}}\bra{i_{A}}tr(\ket{i_{B}}\bra{i_{B}}) \\
+				  =&\ket{i_{A}}\bra{i_{A}}\bra{i_{B}}\ket{i_{B}} \\
+				  =&\ket{i_{A}}\bra{i_{A}} \\
+ tr( (\rho^{A})^{2})=&tr(\ket{i_{A}}\bra{i_{A}}\ket{i_{A}}\bra{i_{A}}) \\
+				  =&tr(\ket{i_{A}}\bra{i_{A}})\\
+				  =&\bra{i_{A}}\ket{i_{A}} \\
+				  =&1 \\
+ tr( (\rho^{B})^{2})=&tr(\ket{i_{B}}\bra{i_{B}}\ket{i_{B}}\bra{i_{B}}) \\
+				  =&tr(\ket{i_{B}}\bra{i_{B}})\\
+				  =&\bra{i_{B}}\ket{i_{B}} \\
+				  =&1 \\
+	\end{aligned}
+\end{equation}
+Thus $\rho_{A}$ (and thus  $\rho_{B}$) are pure states.
+\\
+Conversely,If $\rho_{A}$ (and thus  $\rho_{B}$) are pure states. The state is written as 
+$\ket{\psi}=\sum_{i}\lambda_{i}\ket{i_{A}}\ket{i_{B}}$.
+\begin{equation}
+	\begin{aligned}
+		\rho^{A}=&tr_{B}(\ket{\psi}\bra{\psi})\\
+				=&\sum_{i}\lambda_{i}\ket{i_{A}}\bra{i_{A}}tr_{B}(\sum_{i}\lambda_{i}^{*}\ket{i_{B}}\bra{i_{B}}) \\
+				=&\sum_{i}(\lambda_{i})^{2}\ket{i_{A}}\bra{i_{A}} \\
+	\end{aligned}
+\end{equation}
+Since  $\rho_{A}$ is pure states, $tr((\rho^{A})^{2})=1$.
+\begin{equation}
+	\begin{aligned}
+		tr((\rho^{A})^{2})=&tr(\sum_{i,j}(\lambda_{i})^{2}(\lambda_{j})^{2}\ket{i_{A}}\bra{i_{A}}\ket{j_{A}}\bra{j_{A}})\\
+						  =&tr(\sum_{i}\lambda_{i}^{4}\ket{i_{A}}\bra{i_{A}})\\
+						  =&\sum_{i}\lambda_{i}^{4}\bra{i_{A}}\ket{i_{A}} \\
+						  =&\sum_{i}\lambda_{i}^{4}=1 \\
+	\end{aligned}
+\end{equation}
+Because of $\sum_{i}\lambda_{i}^{4}=1$ and  $\sum_{i}(\lambda_{i})^{2}=1$, Thus we can get $\lambda_{i}^{2}=\lambda_{i}^{4}$ where $\lambda_{i}$ are non-negative real numbers.
+Then, Only one $i$ is equal to 1, and the other $i$ is equal to 0.
+Thus, we proved that $\ket{\psi}=\ket{i_{A}}\ket{i_{B}}$.
+	\\
+\\
+\textbf{Exercise 2.79: } Consider a composite system consisting of two qubits.
+ Find the Schmidt decompositions of the states\\
+$\frac{\ket{00}+\ket{11}}{\sqrt{2}};\frac{\ket{00}+\ket{01}+\ket{10}+\ket{11}}{\sqrt{2}};$
+and $\frac{\ket{00}+\ket{01}+\ket{10}}{2}$.
+\\
+\textbf{Answer:}\\
+\begin{equation}
+	\begin{aligned}
+		&\frac{\ket{00}+\ket{11}}{\sqrt{2}}\\
+		&=\frac{\ket{0}\otimes\ket{0}}{\sqrt{2}}+\frac{\ket{1}\otimes\ket{1}}{\sqrt{2}}\\
+	\end{aligned}
+\end{equation}
+The composite system is consisted by the state $\ket{i_{A}} $ for systerm $A$  and the state $\ket{i_{B}} $ for systerm $B$.
+The standard orthogonal basis of the $A$ and $B$ systems consist of $\ket{0}$ and $\ket{1}$.
+\\
+\begin{equation}
+	\begin{aligned}
+		&\frac{\ket{00}+\ket{01}+\ket{10}+\ket{11}}{\sqrt{2}} \\
+		&=\frac{\ket{0}+\ket{1}}{\sqrt{2}}\otimes\frac{\ket{0}+\ket{1}}{\sqrt{2}} \\
+	\end{aligned}
+\end{equation}
+Suppose $\ket{\psi}=\frac{\ket{0}+\ket{1}}{\sqrt{2}}$, then the above equation equal $\ket{\psi}\ket{\psi}$. 
+\\
+\begin{equation}
+	\begin{aligned}
+		&\frac{\ket{00}+\ket{01}+\ket{10}}{2} \\
+		&=
+	\end{aligned}
+\end{equation}
+\\
+\\
+\textbf{Exercise 2.80: } Suppose $ \ket{\psi}$  and $\ket{\phi}$ are two pure states of a composite quantum 
+system with components $A$ and $B$, with identical Schmidt coefficients. Show that there are unitary 
+transformations $U$ on system $A$ and $V$ on system $B$ such that $\ket{\psi} = (U \otimes V )\ket{\phi}.$
+ \\
+\textbf{Answer:}	 \\
+Suppose $\ket{\psi}=\sum_{i}\lambda_{i}\ket{\psi_{i}}_{A}\ket{\psi_{i}}_{B}$ and  $\ket{\phi}=\sum_{i}\lambda_{i}\ket{\phi_{i}}_{A}\ket{\phi_{i}}_{B}$.
+Define $U=\sum_{i}\ket{\psi_{i}}_{A}\bra{\phi_{i}}_{A}$ and $V=\sum_{j}\ket{\psi_{j}}_{B}\bra{\phi_{j}}_{B}$.
+\begin{equation}
+	\begin{aligned}
+		(U \otimes V )\ket{\phi}=&\sum_{i}\lambda_{i}U\ket{\phi_{i}}_{A}V\ket{\phi_{i}}_{B} \\
+								=&\sum_{i,j,k}\lambda_{i}\ket{\psi_{j}}_{A}\bra{\phi_{j}}_{A}\ket{\phi_{i}}_{A}\ket{\psi_{k}}_{B}\bra{\phi_{k}}_{B}\ket{\phi_{i}}_{B} \\
+								=&\sum_{i}\lambda_{i}\ket{\psi_{i}}\ket{\psi_{i}}\\
+								=&\ket{\psi} \\
+	\end{aligned}
+\end{equation}
+\end{quote}
+\end{document}

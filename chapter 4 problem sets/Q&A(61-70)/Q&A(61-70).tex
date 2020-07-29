@@ -1,0 +1,122 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{physics}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{indentfirst} 
+
+
+ \setlength{\parindent}{2em}
+\geometry{a4paper,scale=0.8}
+\begin{document}
+\begin{quote}
+\textbf{1 }对于任意一个$m*n$阶的矩阵$A$,若定义
+\begin{equation}
+	\begin{aligned}
+		||A||=&\sum_{i=1}^{m}\sum_{j=1}^{n}|a_{ij}|
+	\end{aligned}
+\end{equation} 
+证明它是矩阵A的范数。
+\\
+\textbf{解:}\\
+证明：
+	需要证明此定义满足矩阵范数的四条性质即可。\\
+	非负性：$||A||$大于等于0，仅当$A=0$时，$||A||=0$,所以非负性成立。\\
+	齐次性：k为任意复数，
+\begin{equation}
+	\begin{aligned}
+		||kA||=&\sum_{i=1}^{m}\sum_{j=1}^{n}|k\cdot a_{ij}|\\
+			  =&k\sum_{i=1}^{m}\sum_{j=1}^{n}|a_{ij}|\\
+			  =&k||A||
+	\end{aligned}
+\end{equation} 
+三角不等式：\\
+\begin{equation}
+	\begin{aligned}
+		||A||+||B||=&\sum_{i=1}^{m}\sum_{j=1}^{n}|a_{ij}|+\sum_{i=1}^{m}\sum_{j=1}^{n}|b_{ij}|\\
+			 \geq &\sum_{i=1}^{m}\sum_{j=1}^{n}|a_{ij}+b_{ij}|\\
+			 =& ||A+B||\\
+			\end{aligned}
+		\end{equation}
+相容性：设$A$是$m*p$阶矩阵，$B$是$p*n$阶矩阵，\\
+\begin{equation}
+	\begin{aligned}
+			 ||AB||=&\sum_{i=1}^{m}\sum_{j=1}^{n}\left|\sum_{k=1}^{p}a(i,k)
+		\cdot b(k,j)\right|\\
+		\leq &\sum_{i=1}^{m}\sum_{j=1}^{n}\sum_{k=1}^{m}|a(i,k)||b(k,j)|\\
+		\leq & \sum_{i=1}^{m}\sum_{j=1}^{n}
+		\left[\left(\sum_{k=1}^{p}|a(i,k)|\right)
+		\left(\sum_{k=1}^{p}|b(k,j)|\right)\right]\\
+		=&\left(\sum_{i=1}^{m}\sum_{k=1}^{p}|a(i,k)|\right)
+		  \left(\sum_{j=1}^{n}\sum_{k=1}^{p}|b(k,j)|\right)\\
+		=&|A||B| \\
+	\end{aligned}
+\end{equation}
+所以此定义是矩阵$A$的范数。
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\textbf{2 } 用列主元高斯消去法求解方程组
+\begin{equation}
+	\left\{
+		\begin{aligned}
+			3x_{1}+5x_{2}+4x_{3}=&-1\\
+			5x_{1}+7x_{2}+3x_{3}=&2 \\
+			4x_{1}+4x_{2}+2x_{3}=&2
+		\end{aligned}
+	\right.
+\end{equation}
+\\
+\textbf{解:}\\
+\begin{equation}
+	\begin{aligned}
+		&
+		\begin{bmatrix}
+			3 &5& 4\\ 5 & 7 & 3\\ 4 &4 &2
+		\end{bmatrix}
+		\begin{bmatrix}
+			-1 \\ 2 \\2
+		\end{bmatrix}
+		\underrightarrow{\text{交换第一行和第三行}}\\
+		&\begin{bmatrix}
+			5&7& 3\\ 3 & 5 & 4\\ 4 &4 &2
+		\end{bmatrix}
+		\begin{bmatrix}
+			2 \\ -1 \\ 2
+		\end{bmatrix}
+		\underrightarrow{\text{r2-3/5*r1, r3-4/5*r1}}\\
+		&\begin{bmatrix}
+			5&7& 3\\ 0 & 4/5 & 11/5\\ 0 &-8/5 &-2/5
+		\end{bmatrix}
+		\begin{bmatrix}
+			2 \\ -11/5 \\ 2/5
+		\end{bmatrix}
+	\underrightarrow{\text{交换第二行和第三行}}
+	\\
+	&\begin{bmatrix}
+		5&7& 3\\ 0 &-8/5 &-2/5\\ 0 & 4/5 & 11/5
+	\end{bmatrix}
+	\begin{bmatrix}
+		2\\ 2/5 \\ -11/5 
+	\end{bmatrix}
+	\underrightarrow{\text{r3+1/2*r2}}
+\\
+&\begin{bmatrix}
+	5&7& 3\\ 0 &-8/5 &-2/5\\ 0 & 0 & 2
+\end{bmatrix}
+\begin{bmatrix}
+	2 \\ 2/5 \\ -2
+\end{bmatrix}
+	\end{aligned}
+\end{equation}
+ 回代可求得x1=1,x2=0,x3=-1。
+\end{quote}
+
+\end{document}

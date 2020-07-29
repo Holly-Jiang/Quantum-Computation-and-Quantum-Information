@@ -1,0 +1,275 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{physics}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{indentfirst} 
+ %\mathinner{\langle a | }\quad \mathinner{ | b \rangle}
+% \def\bra#1{\mathinner{\langle{#1}}
+
+
+ \setlength{\parindent}{2em}
+\geometry{a4paper,scale=0.8}
+\begin{document}
+	\title{\textbf{Q\&A（2.31-2.40）}\\[1ex]\begin{large}
+		\end{large}}
+	\author{LuoTingyu\quad JiangHui}
+	\maketitle
+\begin{quote}
+\textbf{Exercise 2.41: (Anti-commutation relations for the Pauli matrices)} Verify the
+anti-commutation relations
+\begin{center}
+	$\{\sigma_{i},\sigma_{j}\} = 0$
+\end{center}
+where $i \neq j$ are both chosen from the set 1,2,3. Also verify that $(i = 0,1,2,3)$
+\begin{center}
+	$\sigma_{i}^{2} = I$.
+\end{center}
+\textbf{Answer:}\\
+$\sigma_{0}=
+\begin{bmatrix}
+1 & 0 \\
+0 & 1	
+\end{bmatrix}$,
+$\sigma_{1}=
+\begin{bmatrix}
+0 & 1 \\
+1 & 0	
+\end{bmatrix}$,
+$\sigma_{2}=
+\begin{bmatrix}
+0 & -i \\
+i & 0	
+\end{bmatrix}$,
+$\sigma_{3}=
+\begin{bmatrix}
+1 & 0 \\
+0 & -1	
+\end{bmatrix}$.
+\\
+When $i=1, j=2$,we can get the follow equation,
+\\
+\begin{equation}
+	\begin{aligned}
+		\{\sigma_{1},\sigma_{2}\}=&
+			\begin{bmatrix}
+				0 & 1 \\
+				1 & 0	
+				\end{bmatrix}
+				\begin{bmatrix}
+					0 & -i \\
+					i & 0	
+					\end{bmatrix}
+				+
+				\begin{bmatrix}
+					0 & -i \\
+					i & 0	
+					\end{bmatrix}
+				\begin{bmatrix}
+					0 & 1 \\
+					1 & 0	
+					\end{bmatrix}
+					\\
+					=&\begin{bmatrix}
+						i & 0 \\
+						0 & -i	
+						\end{bmatrix}
+						+
+						\begin{bmatrix}
+							-i & 0 \\
+							0 & i	
+							\end{bmatrix}
+							\\
+					=&0.
+	\end{aligned}
+	\end{equation}
+	Similarly avaliable, we verify that $\{\sigma_{i},\sigma_{j}\} = 0$.
+\\
+When $i=1, j=2$, we can get the follow equation,
+\begin{equation}
+	\begin{aligned}
+		\sigma_{0}^{2}=&
+			\begin{bmatrix}
+				0 & 1 \\
+				1 & 0	
+				\end{bmatrix}
+				\begin{bmatrix}
+					0 & 1 \\
+					1 & 0	
+					\end{bmatrix}
+					\\
+					=&\begin{bmatrix}
+						1 & 0 \\
+						0 & 1	
+						\end{bmatrix}
+					\\
+					=&I.
+	\end{aligned}
+	\end{equation}
+	Similarly avaliable, we verify that $\sigma_{i}^{2} = I$.
+	\\
+	\\
+\textbf{Exercise 2.42:  } Verify that
+\begin{center}
+	$AB=\frac{[A,B] + \{A,B\} }{2}$.
+\end{center}
+\textbf{Answer:}\\
+\begin{equation}
+	\begin{aligned}
+\frac{[A,B] + \{A,B\} }{2}=&\frac{AB-BA + AB+BA }{2}\\
+						  =&AB.
+	\end{aligned}
+	\end{equation}
+\\
+\\
+\textbf{Exercise 2.43:} Show that for $j,k = 1,2,3,$
+\begin{center}
+$\sigma_{j}\sigma_{k}=\delta_{jk}I+i\sum_{l=1}^{3}\epsilon_{jkl}\sigma_{l}.$
+\end{center}
+
+\textbf{Answer:}\\
+
+$\sigma_{j}\sigma_{j}=\delta_{jj}I+i\sum_{l=1}^{3}\epsilon_{jjl}\sigma_{l}$, according to the exercise 2.40, 
+we can know the equations $\epsilon_{jjl}=0 (l=1,2,3,j=1,2,3)$ and $\sigma_{j}\sigma_{j}=\sigma_{j}^{2}=I$. \\
+Thus when $j=k$,
+$\sigma_{j}\sigma_{k}=\delta_{jk}I+i\sum_{l=1}^{3}\epsilon_{jkl}\sigma_{l}.$\\
+
+When $j=1,k=2$,we can get the follow equations,\\
+$\sigma_{1}\sigma_{2}=0+i\epsilon_{121}\sigma_{1}+i\epsilon_{122}\sigma_{2}+i\epsilon_{123}\sigma_{3}
+=\begin{bmatrix}
+	i & 0 \\
+	0 & -i	
+	\end{bmatrix}$,\\
+$
+			\sigma_{1}\sigma_{2}=
+				\begin{bmatrix}
+					0 & 1 \\
+					1 & 0	
+					\end{bmatrix}
+					\begin{bmatrix}
+						0 & -i \\
+						i & 0	
+						\end{bmatrix}
+						=\begin{bmatrix}
+							i & 0 \\
+							0 & -i	
+							\end{bmatrix}
+$.\\
+	Thus $\sigma_{1}\sigma_{2}=\delta_{12}I+i\sum_{l=1}^{3}\epsilon_{12l}\sigma_{l}$.
+\\
+	When $j=2,k=1$,we can get the follow equations,\\
+$\sigma_{2}\sigma_{1}=0+i\epsilon_{211}\sigma_{1}+i\epsilon_{212}\sigma_{2}+i\epsilon_{213}\sigma_{3}
+=\begin{bmatrix}
+	-i & 0 \\
+	0 & i	
+	\end{bmatrix}$,\\
+$
+			\sigma_{2}\sigma_{1}=
+					\begin{bmatrix}
+						0 & -i \\
+						i & 0	
+						\end{bmatrix}
+				\begin{bmatrix}
+					0 & 1 \\
+					1 & 0	
+					\end{bmatrix}
+						=\begin{bmatrix}
+							-i & 0 \\
+							0 & i	
+							\end{bmatrix}.
+$\\
+	Thus $\sigma_{2}\sigma_{1}=\delta_{21}I+i\sum_{l=1}^{3}\epsilon_{21l}\sigma_{l}$.
+	\\
+	Similarly, we can get the equations: \\
+	$\sigma_{1}\sigma_{3}=\delta_{13}I+i\sum_{l=1}^{3}\epsilon_{13l}\sigma_{l}$\\
+	$\sigma_{3}\sigma_{1}=\delta_{31}I+i\sum_{l=1}^{3}\epsilon_{31l}\sigma_{l}$\\
+	$\sigma_{2}\sigma_{3}=\delta_{23}I+i\sum_{l=2}^{3}\epsilon_{23l}\sigma_{l}$\\
+	$\sigma_{3}\sigma_{2}=\delta_{3}I+i\sum_{l=2}^{3}\epsilon_{32l}\sigma_{l}$.\\
+	In summary, we proved the $\sigma_{j}\sigma_{k}=\delta_{jk}I+i\sum_{l=1}^{3}\epsilon_{jkl}\sigma_{l}.$
+for	$j,k,l = 1,2,3,$.
+\\
+\\
+		\textbf{Exercise 2.44: } Suppose $[A, B] = 0, \{A, B\} = 0,$ and $A$ is invertible.
+ Show that $B$ must be 0s. \\
+\textbf{Answer:}\\
+We can get the follow equations: \\
+$[A, B] = 0  \rightarrow AB-BA=0  $         (1)\\
+$\{A, B\} = 0 \rightarrow AB+BA=0 $           (2).\\
+Add up the above equations, the solution is 
+$AB=0$. \\
+Since $A$ is invertible，$A$ can't be zero matrix, then $B$ must be 0s.
+\\
+\\
+\textbf{Exercise 2.45: } 
+Show that $[A, B]^{\dagger} = [B^{\dagger}, A^{\dagger}].$
+\\
+\textbf{Answer:}\\
+$[A, B]^{\dagger}=(AB-BA)^{\dagger}=(AB)^{\dagger}-(BA)^{\dagger}=B^{\dagger}A^{\dagger}-A^{\dagger}B^{\dagger}
+=[B^{\dagger}, A^{\dagger}]$.
+\\
+\\
+\textbf{Exercise 2.46: } Show that $[A, B] = −[B, A]$.
+\\
+\textbf{Answer:}\\
+$[A, B] =AB-BA =-(BA-AB) =-[B,A]$.
+\\
+\\
+\textbf{Exercise 2.47: } Suppose $A$ and $B$ are Hermitian. Show that $i[A, B]$ is Hermitian.
+\\
+	\textbf{Answer:}\\
+If we want to prove that $i[A, B]$ is Hermitian, we can prove that $(i[A, B])^{\dagger}=i[A, B]$.
+ Konwn that $A$ and $B$ are Hermitian, according to exercise 2.45 and exercise 2.46
+ we can do the following derivation: \\
+$(i[A, B])^{\dagger}= -i[B^{\dagger}, A^{\dagger}]=-i[B,A]=i[A,B]$.\\
+\\
+\\
+\textbf{Exercise 2.48: } What is the polar decomposition of a positive matrix $P$ ? 
+Of a unitary matrix $U$?
+Of a Hermitian matrix, $H$?
+ \\
+\textbf{Answer:}\\
+Since $P$ is a positive matrix and it is diagonalizable. Then $P=\sum_{i}\lambda_{i}\ket{i}\bra{i},\lambda_{i}\geq0. $\\
+$J=\sqrt{P^{\dagger}P}=\sqrt{P^{2}} =\sum_{i}\lambda_{i}^{2}\ket{i}\bra{i}=P$.\\
+Therefore polar decomposition of $P$ is $P = UP$ for all $P$. Thus $U = I$, then $P = P.$
+\\
+Since $U$ is a unitary matrix,then $U$ can be decomposed by $U=WJ$ where $W$ is unitary and $J$ is positive, $J=\sqrt{U^{\dagger}U}$.
+$J=\sqrt{U^{\dagger}U}=\sqrt{I}=I.$\\
+Since unitary operators are invertible, $W = UJ^{−1} = UI^{−1} = UI = U$. Thus polar decomposition of $U$ is $U = U$.
+\\
+Suppose $H = UJ.$$J=\sqrt{H^{\dagger}H}=\sqrt{H^{2}}$.\\
+For spectral decomposition, $H=\sum_{i}\lambda_{i}\ket{i}\bra{i},\lambda_{i}\in R$.\\
+$\sqrt{H^{\dagger}H}=\sum_{i}\sqrt{\lambda_{i}^{2}}\ket{i}\bra{i}=\sum_{i}|\lambda_{i}|\ket{i}\bra{i}\neq H$.\\
+Thus $H=U\sqrt{H^{2}}$.
+\\
+\\
+\textbf{Exercise 2.49: } Express the polar decomposition of a normal matrix in the outer product representation.
+\\
+\textbf{Answer:}\\
+Suppose $A$ is a normal matrix, then $A$ is diagonalizable, $A=\sum_{i}\lambda_{i}\ket{i}\bra{i}$.\\
+\begin{equation}
+	\begin{aligned}
+J=&\sqrt{A^{\dagger}A}=\sum_{i}|\lambda_{i}|\ket{i}\bra{i}\\
+U=&\sum_{i}\ket{e_{i}}\bra{i}\\
+A=&UJ\\
+ =&\sum_{i}\ket{e_{i}}\bra{i}*\sum_{i}|\lambda_{i}|\ket{i}\bra{i}\\
+ =&\sum_{i}|\lambda_{i}|\ket{e_{i}}\bra{i}
+	\end{aligned}
+	\end{equation}
+\\
+\\
+\textbf{Exercise 2.50: }  Find the left and right polar decompositions of the matrix
+\begin{center}
+$\begin{bmatrix}1& 0\\1& 1\end{bmatrix}$.
+\end{center}
+\textbf{Answer:}\\
+Suppose $A=\begin{bmatrix}1& 0\\1& 1\end{bmatrix}$, $A=UJ$.
+\begin{equation}
+	\begin{aligned}
+J=&\sqrt{A^{\dagger}A}=\sqrt{\begin{bmatrix}2& 1\\1& 1\end{bmatrix}}\\
+U=&\sum_{i}\ket{e_{i}}\bra{i}\\
+A=&UJ=\sum_{i}\ket{e_{i}}\bra{i}*\sum_{i}|\lambda_{i}|\ket{i}\bra{i}\\
+ =&\sum_{i}|\lambda_{i}|\ket{e_{i}}\bra{i}
+	\end{aligned}
+	\end{equation}
+\end{quote}
+
+\end{document}

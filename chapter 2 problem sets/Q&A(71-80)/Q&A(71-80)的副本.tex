@@ -1,0 +1,54 @@
+
+\documentclass[UTF8]{ctexart}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{indentfirst} 
+ %\mathinner{\langle a | }\quad \mathinner{ | b \rangle}
+% \def\bra#1{\mathinner{\langle{#1}}
+
+
+ \setlength{\parindent}{2em}
+\geometry{a4paper,scale=0.8}
+\begin{document}
+\begin{quote}
+1. Prove that two eigenvectors of a Hermitian operator with different eigenvalues are necessarily orthogonal.\\
+\textbf{Answer:}\\
+Firstly, we set A is Hermitian, then we set λi and λj are different eigenvalues of A, and the corresponding eigenvectors are |vi⟩ and |vj⟩.
+Secondly, we have that 
+\begin{equation}
+	\begin{aligned}
+	(\ket{v_{i}},A\ket{v_{j}})=&(\ket{v_{i}},\lambda \ket{v_{j}})\\
+	=&\lambda_{j}  (\ket{v_{i}},\ket{v_{j}}) \\
+	=&\lambda_{j} \bra{v_{i}}\ket{v_{j}}\\
+	(\ket{v_{i}},A\ket{v_{j}})=&(A^{\dagger}\ket{v_{i}},\ket{v_{j}})\\
+	=&(A\ket{v_{i}},\ket{v_{j}})\\
+	=& (\lambda_{i}\ket{v_{i}},\ket{v_{j}}) \\
+	=&\lambda_{i} \bra{v_{i}}\ket{v_{j}}.\\
+	\end{aligned}
+\end{equation}
+From above we can know that $ \lambda_{j} \bra{v_{i}}\ket{v_{j}}=\lambda_{i} \bra{v_{i}}\ket{v_{j}}.$
+Since $\lambda_{i} \neq \lambda_{j}  $, we have that $ \bra{v_{i}}\ket{v_{j}}= 0$. Finally, we can conclude that two eigenvectors of a Hermitian operator with different eigenvalues are necessarily orthogonal.
+\\
+\\
+2. Suppose a composite of systems $A$ and $B$ is in the state $\ket{a}\ket{b}$, 
+where $\ket{a}$ is a pure state of system $A$, and $\ket{b} $ is a pure state of system $B$. 
+Show that the reduced density operator of system $A$ alone is a pure state.\\
+\textbf{Answer:}\\
+\begin{equation}
+	\begin{aligned}
+		\rho^{AB}=&\ket{a}\bra{a}\otimes \ket{b}\bra{b} \\
+		 \rho^{A}=&tr_{B}(\rho^{AB}) \\
+				  =&\ket{a}\bra{a}tr(\ket{b}\bra{b}) \\
+				  =&\ket{a}\bra{a}\bra{b}\ket{b} \\
+				  =&\ket{a}\bra{a} \\
+ tr( (\rho^{A})^{2})=&tr(\ket{a}\bra{a}\ket{a}\bra{a}) \\
+				  =&tr(\ket{a}\bra{a})\\
+				  =&\bra{a}\ket{a} \\
+				  =&1 \\
+	\end{aligned}
+\end{equation}
+Thus $\rho^{A}$ is pure.
+	\end{quote}
+\end{document}
